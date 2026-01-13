@@ -1,8 +1,94 @@
 // 데이터 파일 로드 (Vite import.meta.glob 사용)
-const dataModules = import.meta.glob('../../ia/ia_js/data-*.js', { query: '?url', import: 'default', eager: true });
+const dataModules = import.meta.glob('../../ia/ia_js/data-*.js', { import: 'default', eager: true });
 const scripts = Object.values(dataModules);
 
-// 메뉴 구조 정의
+// ==========================================
+// 유틸리티 및 UI 객체 (먼저 선언)
+// ==========================================
+
+const iaMemo = {
+  init: () => { iaMemo.toggle(); iaMemo.all(); },
+  toggle: () => {
+    document.addEventListener('click', (e) => {
+      const target = e.target.closest('.data-list tbody > tr > td .note-list.option-fold');
+      if (target) target.classList.toggle('is-open');
+    });
+  },
+  all: () => {
+    document.addEventListener('click', (e) => {
+        if (e.target.matches('.btn-memo-all')) {
+            const btn = e.target;
+            const tabId = btn.closest('.tab-item').id;
+            const isOpen = btn.classList.toggle('is-open');
+            btn.textContent = isOpen ? '닫기' : '더보기';
+            document.querySelectorAll(`#${tabId} .note-list.option-fold`).forEach(note => note.classList.toggle('is-open', isOpen));
+        }
+    });
+  }
+};
+
+const commUiFnSetVH = () => {
+  document.documentElement.style.setProperty('--vh', `${window.innerHeight * 0.01}px`);
+};
+
+const commUiFnTab = {
+  init: () => {
+    commUiFnSetVH();
+    window.addEventListener('resize', commUiFnSetVH);
+    commUiFnTab.select();
+  },
+  select: () => {
+    document.addEventListener('click', (e) => {
+        const menu = e.target.closest('.tab-menu');
+        if (menu) {
+            // 상위 메뉴 클릭 시 하위 메뉴 토글 (target 유무와 상관없이)
+            const isDep1 = menu.parentElement.classList.contains('gnb-dep1');
+            
+            if (isDep1) {
+                // 다른 상위 메뉴 비활성화
+                document.querySelectorAll('.gnb-dep1 > .tab-menu').forEach(m => m.classList.remove('current', 'is-active'));
+                menu.classList.add('current', 'is-active');
+                
+                // 탭 컨텐츠 숨김 (섹션 전체 탭 활성화를 위해 일단 다 숨김)
+                document.querySelectorAll('.tab-list > .tab-item').forEach(item => {
+                    item.classList.remove('is-active');
+                    item.setAttribute('aria-hidden', 'true');
+                });
+            } else {
+                // 하위 메뉴 클릭 시
+                const siblings = menu.parentElement.children;
+                Array.from(siblings).forEach(sib => sib.classList.remove('is-active'));
+                menu.classList.add('is-active');
+                
+                // 부모 상위 메뉴도 활성화 유지
+                const parentDep1 = menu.closest('.gnb-dep1 > li');
+                if (parentDep1) parentDep1.classList.add('current'); // is-active는 선택 사항
+            }
+
+            // 탭 전환 로직
+            const targetId = menu.getAttribute('aria-controls');
+            if (targetId) {
+                const target = document.getElementById(targetId);
+                if (target) {
+                    // 모든 탭 숨김 (위에서 이미 했지만 안전하게 다시)
+                    document.querySelectorAll('.tab-list > .tab-item').forEach(item => {
+                        item.classList.remove('is-active');
+                        item.setAttribute('aria-hidden', 'true');
+                    });
+                    
+                    target.classList.add('is-active');
+                    target.setAttribute('aria-hidden', 'false');
+                }
+            }
+        }
+    });
+  }
+};
+
+// ==========================================
+// 메뉴 설정 및 렌더링
+// ==========================================
+
 const menuConfig = [
   { id: 'tabAll', name: '전체', isAll: true },
   {
@@ -205,14 +291,12 @@ const menuConfig = [
   },
 ];
 
-// 레이아웃 렌더링 함수
 const renderLayout = () => {
   const gnbContainer = document.querySelector('.gnb-dep1');
   const tabListContainer = document.querySelector('.tab-list');
   
   if (!gnbContainer || !tabListContainer) return;
 
-  // 1. GNB 생성
   let gnbHtml = '';
   menuConfig.forEach(item => {
     if (item.isAll) {
@@ -239,8 +323,9 @@ const renderLayout = () => {
         subMenuHtml += '</ul>';
       }
       
+      // ID 중복 방지를 위해 GroupMenu 사용, tab-menu 클래스 추가하여 클릭 이벤트 수신
       gnbHtml += `
-        <li id="${item.id}Menu"> <!-- Parent li uses same ID suffix but distinct role -->
+        <li class="tab-menu" id="${item.id}GroupMenu" aria-controls="${item.id}">
           <a href="javascript:;">
             <strong>${item.name} <em class="tab-count">0</em></strong>
           </a>
@@ -251,16 +336,12 @@ const renderLayout = () => {
   });
   gnbContainer.innerHTML = gnbHtml;
 
-  // 2. 탭 컨텐츠 생성 (재귀적으로 subs까지 포함)
   let tabHtml = '';
-  
-  // 전체 탭
   const allItem = menuConfig.find(item => item.isAll);
   if (allItem) {
     tabHtml += createTabItemHtml(allItem.id, allItem.name, true);
   }
 
-  // 서브 탭들
   menuConfig.forEach(item => {
     if (!item.isAll && item.subs) {
       item.subs.forEach(sub => {
@@ -271,7 +352,6 @@ const renderLayout = () => {
   tabListContainer.innerHTML = tabHtml;
 };
 
-// 탭 아이템 HTML 생성 헬퍼
 function createTabItemHtml(id, name, isActive) {
   const activeClass = isActive ? 'is-active' : '';
   const ariaHidden = isActive ? 'false' : 'true';
@@ -295,18 +375,8 @@ function createTabItemHtml(id, name, isActive) {
   `;
 }
 
-
-// 모든 스크립트 로드를 위한 Promise 생성
-const loadScript = (src) => {
-  return new Promise((resolve, reject) => {
-    const script = document.createElement('script');
-    script.src = src;
-    script.async = false;
-    script.onload = resolve;
-    script.onerror = reject;
-    document.head.appendChild(script);
-  });
-};
+// 모든 스크립트 로드를 위한 Promise 생성 (필요 없어짐, 모듈 사용)
+const loadScript = (src) => Promise.resolve();
 
 const iaData = {
   init: () => {
@@ -368,19 +438,11 @@ const iaData = {
     `;
 
     const tbody = container.querySelector('.data-list tbody');
-    // 캡션 설정
-    const caption = container.querySelector('caption');
-    if (caption) {
-        // ... (캡션 로직 생략 또는 간소화)
-    }
-
     let html = '';
     if (data && data.list && data.list.length > 0) {
       data.list.forEach((item, index) => {
         let statusClass = '';
         if (item.status === '삭제') statusClass = 'is-delete';
-        // ... (기타 상태 클래스 매핑은 CSS에 의존하거나 여기서 추가)
-        
         let memoHtml = '';
         if (item.memo && item.memo.length > 0) {
           const listClass = item.memo.length > 1 ? 'note-list option-fold' : 'note-list';
@@ -421,7 +483,6 @@ const iaData = {
     iaData.countAll(elementId);
   },
   option: () => {
-    // 옵션 생성 (중복 방지 로직 포함)
     const addOptions = (selector, options) => {
         document.querySelectorAll(selector).forEach(select => {
             if (select.options.length > 1) return;
@@ -430,7 +491,6 @@ const iaData = {
             });
         });
     };
-    
     addOptions('.data-list thead > tr > th select[data-sort-name="order"]', [
         { value: '1차', text: '1차' }, { value: '2차', text: '2차' }, { value: '3차', text: '3차' }, { value: '-', text: '-' }
     ]);
@@ -439,13 +499,11 @@ const iaData = {
     ]);
   },
   change: () => {
-    // 이벤트 위임 사용 (동적 생성 요소 대응)
     document.addEventListener('change', (e) => {
         if (e.target.matches('.data-list thead > tr > th select')) {
             const select = e.target;
             const tabId = select.closest('.tab-item').id;
             const th = select.closest('th');
-            
             if (select.value === '') {
                 th.classList.remove('is-active');
             } else {
@@ -458,21 +516,18 @@ const iaData = {
   filter: (tabId) => {
     const selects = document.querySelectorAll(`#${tabId} .data-list thead > tr > th select`);
     let orderVal = '', statusVal = '';
-
     selects.forEach(select => {
       const sortName = select.getAttribute('data-sort-name');
       const val = select.value;
       if (sortName === 'order') orderVal = val;
       if (sortName === 'status') statusVal = val;
     });
-
     const rows = document.querySelectorAll(`#${tabId} .data-list tbody > tr:not(.nodata)`);
     rows.forEach(row => {
       const orderText = row.querySelector('.sort-order')?.textContent || '';
       const statusText = row.querySelector('.sort-status')?.textContent || '';
       const matchOrder = orderVal === '' || orderVal === orderText;
       const matchStatus = statusVal === '' || statusVal === statusText;
-
       if (matchOrder && matchStatus) {
         row.classList.remove('is-hide');
         row.style.display = '';
@@ -488,15 +543,11 @@ const iaData = {
         if (e.target.matches('.filter-reset, .filter-reset *')) {
             const btn = e.target.closest('.filter-reset');
             const tabId = btn.closest('.tab-item').id;
-            
             const selects = document.querySelectorAll(`#${tabId} .data-list thead > tr > th select`);
             selects.forEach(select => {
                 select.value = '';
-                // trigger change manually if needed or just reset UI
                 select.closest('th').classList.remove('is-active');
             });
-            
-            // 정렬 초기화
             const ths = document.querySelectorAll(`#${tabId} .data-list thead > tr > th`);
             ths.forEach(th => {
                 th.classList.remove('is-sort');
@@ -506,14 +557,11 @@ const iaData = {
                     sortBtn.classList.remove('desc', 'asc');
                 }
             });
-
-            // 필터링 해제
             const rows = document.querySelectorAll(`#${tabId} .data-list tbody > tr`);
             rows.forEach(row => {
                 row.classList.remove('is-hide');
                 row.style.display = '';
             });
-            
             iaData.count(tabId);
         }
     });
@@ -534,22 +582,13 @@ const iaData = {
     const total = rows.length;
     const calcPercent = (val) => total ? ((val / total) * 100).toFixed(2) : 0;
     const html = `전체 : <strong class="fc-primary">${total}</strong>건, 대기 : <strong class="fc-warning">${wait}</strong>건<span class="fc-base">(${calcPercent(wait)}%)</span>, 진행 : <strong class="fc-highlight">${progress}</strong>건<span class="fc-base">(${calcPercent(progress)}%)</span>, 확인 : <strong class="fc-highlight">${confirm}</strong>건<span class="fc-base">(${calcPercent(confirm)}%)</span>, 완료 : <strong class="fc-secondary">${complete}</strong>건<span class="fc-base">(${calcPercent(complete)}%)</span>, 삭제 : <strong class="fc-disabled">${deleted}</strong>건<span class="fc-base">(${calcPercent(deleted)}%)</span>`;
-    
     const countContainer = document.querySelector(`#${tabId} .title-h3 .count`);
     if(countContainer) countContainer.innerHTML = html;
   },
   countAll: (tabId) => {
-    // 탭 카운트 업데이트
     const rows = document.querySelectorAll(`#${tabId} .data-list tbody > tr:not(.nodata):not(.is-hide)`);
-    // GNB 메뉴 카운트 업데이트 (상위 메뉴 포함)
-    // tabId 예: tabPageA1 -> tabPageA1Menu (서브), tabPageAMenu (상위)
-    
-    // 서브 메뉴 카운트
     const subMenuCount = document.querySelector(`#${tabId}Menu .tab-count`);
     if (subMenuCount) subMenuCount.textContent = rows.length;
-    
-    // 상위 메뉴 카운트 업데이트 로직은 좀 더 복잡 (모든 서브 탭 합산 필요)
-    // 여기서는 간단히 생략하거나 별도 루프 필요
   },
   selectRow: () => {
     document.addEventListener('click', (e) => {
@@ -558,7 +597,6 @@ const iaData = {
     });
   },
   sort: () => {
-    // 이벤트 위임 사용
     document.addEventListener('click', (e) => {
         if (e.target.matches('.data-sort')) {
             const btn = e.target;
@@ -567,10 +605,7 @@ const iaData = {
             const tbody = table.querySelector('tbody');
             const tabId = table.closest('.tab-item').id;
             const index = Array.from(th.parentNode.children).indexOf(th);
-            
             let direction = btn.classList.contains('asc') ? -1 : 1;
-            
-            // 다른 헤더 초기화
             Array.from(th.parentNode.children).forEach(sibling => {
                 if (sibling !== th) {
                     sibling.classList.remove('is-sort');
@@ -581,12 +616,10 @@ const iaData = {
                     }
                 }
             });
-
             btn.classList.toggle('asc', direction === 1);
             btn.classList.toggle('desc', direction === -1);
             btn.textContent = direction === 1 ? '▲' : '▼';
             th.classList.add('is-sort');
-
             const rows = Array.from(tbody.querySelectorAll('tr:not(.nodata)'));
             rows.sort((a, b) => {
                 const textA = a.children[index]?.textContent.toUpperCase() || '';
@@ -599,47 +632,40 @@ const iaData = {
   },
 };
 
+// ==========================================
 // 메인 실행 로직
+// ==========================================
 (async () => {
   try {
-    // 1. 레이아웃(메뉴, 탭) 먼저 생성
     renderLayout();
 
-    // 2. 데이터 스크립트 로드
-    await Promise.all(scripts.map(src => loadScript(src)));
-    
-    // 3. 데이터 집계 및 매핑
     const allData = { list: [] };
     const groupData = {};
 
-    Object.keys(window).forEach(key => {
-      if (key.startsWith('iaPage') && window[key] && window[key].list) {
-        allData.list.push(...window[key].list);
-
-        const match = key.match(/^iaPage([A-Z])Data(\d*)$/);
-        if (match) {
-          const group = match[1]; 
-          const num = match[2];   
-          
-          if (num) {
-            iaData.set(`tabPage${group}${num}`, window[key]);
+    Object.keys(dataModules).forEach(path => {
+        const module = dataModules[path];
+        if (module && module.list) {
+            allData.list.push(...module.list);
+            const fileName = path.split('/').pop().replace('.js', '');
+            const key = fileName.replace('data-page', '');
+            const tabId = `tabPage${key}`;
             
-            if (!groupData[group]) groupData[group] = { list: [] };
-            groupData[group].list.push(...window[key].list);
-          } else {
-             iaData.set(`tabPage${group}`, window[key]);
-          }
+            iaData.set(tabId, module);
+
+            const match = key.match(/^([A-Z])(\d*)$/);
+            if (match) {
+                const group = match[1];
+                if (!groupData[group]) groupData[group] = { list: [] };
+                groupData[group].list.push(...module.list);
+            }
         }
-      }
     });
 
     iaData.set('tabAll', allData);
-    
     Object.keys(groupData).forEach(group => {
       iaData.set(`tabPage${group}`, groupData[group]);
     });
     
-    // 4. 기능 초기화
     iaData.init();
     iaMemo.init();
     commUiFnTab.init();
@@ -648,91 +674,6 @@ const iaData = {
     console.error('Initialization failed:', err);
   }
 })();
-
-// 메모 및 UI 객체
-const iaMemo = {
-  init: () => { iaMemo.toggle(); iaMemo.all(); },
-  toggle: () => {
-    document.addEventListener('click', (e) => {
-      const target = e.target.closest('.data-list tbody > tr > td .note-list.option-fold');
-      if (target) target.classList.toggle('is-open');
-    });
-  },
-  all: () => {
-    document.addEventListener('click', (e) => {
-        if (e.target.matches('.btn-memo-all')) {
-            const btn = e.target;
-            const tabId = btn.closest('.tab-item').id;
-            const isOpen = btn.classList.toggle('is-open');
-            btn.textContent = isOpen ? '닫기' : '더보기';
-            document.querySelectorAll(`#${tabId} .note-list.option-fold`).forEach(note => note.classList.toggle('is-open', isOpen));
-        }
-    });
-  }
-};
-
-const commUiFnSetVH = () => {
-  document.documentElement.style.setProperty('--vh', `${window.innerHeight * 0.01}px`);
-};
-
-const commUiFnTab = {
-  init: () => {
-    commUiFnSetVH();
-    window.addEventListener('resize', commUiFnSetVH);
-    commUiFnTab.select();
-  },
-  select: () => {
-    document.addEventListener('click', (e) => {
-        const menu = e.target.closest('.tab-menu');
-        if (menu) {
-            const targetId = menu.getAttribute('aria-controls');
-            const target = document.getElementById(targetId);
-            if (!target) return;
-
-            // 상위 탭(GNB Dep1)인지 하위 탭(GNB Dep2)인지 구분
-            const isDep1 = menu.parentElement.classList.contains('gnb-dep1');
-            
-            if (isDep1) {
-                // Dep1 클릭 시: 다른 Dep1 비활성화
-                document.querySelectorAll('.gnb-dep1 > .tab-menu').forEach(m => m.classList.remove('current', 'is-active'));
-                menu.classList.add('current', 'is-active');
-                
-                // 모든 탭 컨텐츠 숨김
-                document.querySelectorAll('.tab-list > .tab-item').forEach(item => {
-                    item.classList.remove('is-active');
-                    item.setAttribute('aria-hidden', 'true');
-                });
-                
-                // 타겟 탭 활성화 (섹션 전체)
-                target.classList.add('is-active');
-                target.setAttribute('aria-hidden', 'false');
-                
-                // 하위 메뉴가 있다면 첫 번째 하위 메뉴 활성화 시각 효과 (선택사항)
-            } else {
-                // Dep2 클릭 시
-                // 형제 메뉴 비활성화
-                const siblings = menu.parentElement.children;
-                Array.from(siblings).forEach(sib => sib.classList.remove('is-active'));
-                menu.classList.add('is-active');
-                
-                // 부모 Dep1도 활성화 유지
-                const parentDep1 = menu.closest('.gnb-dep1 > li');
-                if (parentDep1) parentDep1.classList.add('current');
-
-                // 모든 탭 컨텐츠 숨김
-                document.querySelectorAll('.tab-list > .tab-item').forEach(item => {
-                    item.classList.remove('is-active');
-                    item.setAttribute('aria-hidden', 'true');
-                });
-                
-                // 타겟 탭 활성화
-                target.classList.add('is-active');
-                target.setAttribute('aria-hidden', 'false');
-            }
-        }
-    });
-  }
-};
 
 // 모바일 메뉴 등
 document.querySelectorAll('.btn-mobilemenu').forEach(btn => {
