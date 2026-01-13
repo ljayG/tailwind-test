@@ -1,4 +1,4 @@
-const iaPageAData1 = {
+var iaPageAData1 = {
   list: [
     {
       createDate: '2024-03-11',

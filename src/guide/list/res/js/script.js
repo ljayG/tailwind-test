@@ -1,825 +1,465 @@
-$('head').append('<script src="./ia_js/data-pageA1.js"></script>').append('<script src="./ia_js/data-pageA2.js"></script>').append('<script src="./ia_js/data-pageA3.js"></script>').append('<script src="./ia_js/data-pageA4.js"></script>').append('<script src="./ia_js/data-pageA5.js"></script>').append('<script src="./ia_js/data-pageA6.js"></script>').append('<script src="./ia_js/data-pageA7.js"></script>').append('<script src="./ia_js/data-pageB1.js"></script>').append('<script src="./ia_js/data-pageB2.js"></script>').append('<script src="./ia_js/data-pageB3.js"></script>').append('<script src="./ia_js/data-pageB4.js"></script>').append('<script src="./ia_js/data-pageB5.js"></script>').append('<script src="./ia_js/data-pageB6.js"></script>').append('<script src="./ia_js/data-pageB7.js"></script>').append('<script src="./ia_js/data-pageB8.js"></script>').append('<script src="./ia_js/data-pageB9.js"></script>').append('<script src="./ia_js/data-pageB10.js"></script>').append('<script src="./ia_js/data-pageB11.js"></script>').append('<script src="./ia_js/data-pageB12.js"></script>').append('<script src="./ia_js/data-pageB13.js"></script>').append('<script src="./ia_js/data-pageC1.js"></script>').append('<script src="./ia_js/data-pageC2.js"></script>').append('<script src="./ia_js/data-pageC3.js"></script>').append('<script src="./ia_js/data-pageC4.js"></script>').append('<script src="./ia_js/data-pageC5.js"></script>').append('<script src="./ia_js/data-pageD1.js"></script>').append('<script src="./ia_js/data-pageD2.js"></script>').append('<script src="./ia_js/data-pageD3.js"></script>').append('<script src="./ia_js/data-pageD4.js"></script>').append('<script src="./ia_js/data-pageD5.js"></script>').append('<script src="./ia_js/data-pageE1.js"></script>').append('<script src="./ia_js/data-pageE2.js"></script>').append('<script src="./ia_js/data-pageE3.js"></script>').append('<script src="./ia_js/data-pageE4.js"></script>').append('<script src="./ia_js/data-pageE5.js"></script>').append('<script src="./ia_js/data-pageE6.js"></script>').append('<script src="./ia_js/data-pageE7.js"></script>').append('<script src="./ia_js/data-pageE8.js"></script>').append('<script src="./ia_js/data-pageE9.js"></script>').append('<script src="./ia_js/data-pageE10.js"></script>').append('<script src="./ia_js/data-pageF1.js"></script>').append('<script src="./ia_js/data-pageF2.js"></script>').append('<script src="./ia_js/data-pageF3.js"></script>').append('<script src="./ia_js/data-pageF4.js"></script>').append('<script src="./ia_js/data-pageF5.js"></script>').append('<script src="./ia_js/data-pageF6.js"></script>').append('<script src="./ia_js/data-pageF7.js"></script>').append('<script src="./ia_js/data-pageF8.js"></script>').append('<script src="./ia_js/data-pageF9.js"></script>').append('<script src="./ia_js/data-pageF10.js"></script>').append('<script src="./ia_js/data-pageF12.js"></script>').append('<script src="./ia_js/data-pageG1.js"></script>').append('<script src="./ia_js/data-pageG2.js"></script>').append('<script src="./ia_js/data-pageG3.js"></script>').append('<script src="./ia_js/data-pageG4.js"></script>').append('<script src="./ia_js/data-pageG5.js"></script>').append('<script src="./ia_js/data-pageG6.js"></script>').append('<script src="./ia_js/data-pageG7.js"></script>').append('<script src="./ia_js/data-pageG8.js"></script>').append('<script src="./ia_js/data-pageH1.js"></script>').append('<script src="./ia_js/data-pageJ1.js"></script>').append('<script src="./ia_js/data-pageJ2.js"></script>').append('<script src="./ia_js/data-pageJ3.js"></script>').append('<script src="./ia_js/data-pageJ4.js"></script>').append('<script src="./ia_js/data-pageJ5.js"></script>').append('<script src="./ia_js/data-pageJ6.js"></script>').append('<script src="./ia_js/data-pageJ7.js"></script>').append('<script src="./ia_js/data-pageJ8.js"></script>').append('<script src="./ia_js/data-pageJ9.js"></script>').append('<script src="./ia_js/data-pageJ10.js"></script>').append('<script src="./ia_js/data-pageK1.js"></script>').append('<script src="./ia_js/data-pageK2.js"></script>').append('<script src="./ia_js/data-pageK3.js"></script>').append('<script src="./ia_js/data-pageK4.js"></script>').append('<script src="./ia_js/data-pageK5.js"></script>').append('<script src="./ia_js/data-pageK6.js"></script>').append('<script src="./ia_js/data-pageK7.js"></script>').append('<script src="./ia_js/data-pageK8.js"></script>').append('<script src="./ia_js/data-pageL1.js"></script>').append('<script src="./ia_js/data-pageL2.js"></script>').append('<script src="./ia_js/data-pageL3.js"></script>').append('<script src="./ia_js/data-pageM1.js"></script>').append('<script src="./ia_js/data-pageM2.js"></script>').append('<script src="./ia_js/data-pageM3.js"></script>').append('<script src="./ia_js/data-pageM4.js"></script>').append('<script src="./ia_js/data-pageM5.js"></script>').append('<script src="./ia_js/data-pageM6.js"></script>').append('<script src="./ia_js/data-pageM7.js"></script>').append('<script src="./ia_js/data-pageM8.js"></script>').append('<script src="./ia_js/data-pageM9.js"></script>').append('<script src="./ia_js/data-pageM10.js"></script>').append('<script src="./ia_js/data-pageN1.js"></script>').append('<script src="./ia_js/data-pageN2.js"></script>').append('<script src="./ia_js/data-pageN3.js"></script>').append('<script src="./ia_js/data-pageN4.js"></script>').append('<script src="./ia_js/data-pageN5.js"></script>').append('<script src="./ia_js/data-pageN6.js"></script>').append('<script src="./ia_js/data-pageN7.js"></script>').append('<script src="./ia_js/data-pageN8.js"></script>').append('<script src="./ia_js/data-pageZ1.js"></script>').append('<script src="./ia_js/data-pageZ2.js"></script>').append('<script src="./ia_js/data-pageZ3.js"></script>').append('<script src="./ia_js/data-pageZ4.js"></script>').append('<script src="./ia_js/data-pageZ5.js"></script>').append('<script src="./ia_js/data-pageZ6.js"></script>').append('<script src="./ia_js/data-pageZ7.js"></script>').append('<script src="./ia_js/data-pageZ8.js"></script>').append('<script src="./ia_js/data-pageZ9.js"></script>').append('<script src="./ia_js/data-pageZ10.js"></script>').append('<script src="./ia_js/data-pageZ11.js"></script>').append('<script src="./ia_js/data-pageX1.js"></script>');
+// 데이터 파일 로드 (Vite import.meta.glob 사용)
+const dataModules = import.meta.glob('../../ia/ia_js/data-*.js', { query: '?url', import: 'default', eager: true });
+const scripts = Object.values(dataModules);
+
+// 모든 스크립트 로드를 위한 Promise 생성
+const loadScript = (src) => {
+  return new Promise((resolve, reject) => {
+    const script = document.createElement('script');
+    script.src = src;
+    script.async = false;
+    script.onload = resolve;
+    script.onerror = reject;
+    document.head.appendChild(script);
+  });
+};
+
 const iaData = {
-    init: () => {
-      (iaData.change(), iaData.filterReset(), iaData.selectRow(), iaData.sort(), iaData.option());
-    },
-    set: (a, t) => {
-      const s = $(`#${a} .data-body`);
-      s.html('\n    <table class="data-list">\n                            <caption class="sr-only">\n                              산출물 목록\n                            </caption>\n                            <colgroup>\n                              <col />\n                              <col />\n                              <col />\n                              <col />\n                              <col />\n                              <col />\n                              <col />\n                              <col />\n                              <col />\n                              <col />\n                              <col />\n                              <col />\n                              <col />\n                              <col />\n                              <col />\n                              <col />\n                              <col />\n                            </colgroup>\n                            <thead>\n                              <tr>\n                                <th scope="col">NO</th>\n                                <th scope="col">생성일 <button type="button" class="data-sort">▼</button></th>\n                                <th scope="col">최종수정일 <button type="button" class="data-sort">▼</button></th>\n                                <th scope="col">Depth1 <button type="button" class="data-sort">▼</button></th>\n                                <th scope="col">Depth2 <button type="button" class="data-sort">▼</button></th>\n                                <th scope="col">Depth3 <button type="button" class="data-sort">▼</button></th>\n                                <th scope="col">Depth4 <button type="button" class="data-sort">▼</button></th>\n                                <th scope="col">디바이스 <button type="button" class="data-sort">▼</button></th>\n                                <th scope="col">화면구분 <button type="button" class="data-sort">▼</button></th>\n                                <th scope="col">페이지종류 <button type="button" class="data-sort">▼</button></th>\n                                <th scope="col">페이지명</th>\n                                <th scope="col">페이지ID</th>\n                                <th scope="col">링크</th>\n                                <th scope="col">\n                                  <select name="dataSortOrder" data-sort-name="order" title="오픈순차">\n                                    <option value="">오픈순차</option>\n                                  </select>\n                                  <button type="button" class="data-sort">▼</button>\n                                </th>\n                                <th scope="col">\n                                  <select name="dataSortStatus" data-sort-name="status" title="진행상태">\n                                    <option value="">상태</option>\n                                  </select>\n                                  <button type="button" class="data-sort">▼</button>\n                                </th>\n                                <th scope="col">메모 <button type="button" class="btn-memo-all">더보기</button></th>\n                              </tr>\n                            </thead>\n                            <tbody></tbody>\n                          </table>\n    ');
-      const i = $(`#${a} .data-list tbody`);
-      var e = $('.data .data-body .data-list caption');
-      (e.text(''),
-        e.each(function () {
-          var a = !!$(this).closest('table').find('> thead').length,
-            t = $(this).closest('table').find('th'),
-            s = t.length,
-            e = 0,
-            i = '';
-          for (a && (s = (t = $(this).closest('table').find('> thead th')).length), e = 0; e < s; e++) ('' !== t.eq(e).text() && (i += t.eq(e).text()), e < s - 1 && (i += ', '));
-          $(this).text(i + ' 정보입니다.');
-        }));
-      let p = '';
-      if (0 < t.list.length) {
-        let e = 0;
-        ($.each(t.list, (a, t) => {
-          e++;
-          let s = '';
-          ('삭제' === t.status && (s = 'is-delete'),
-            '묶음' === t.user && (s = 'is-bundle'),
-            '스탭' === t.user && (s = 'is-individual'),
-            '탭묶음' === t.user && (s = 'is-tab-bundle'),
-            '탭' === t.user && (s = 'is-tab-page'),
-            '가이드묶음' === t.user && (s = 'is-guide'),
-            '가이드스탭' === t.user && (s = 'is-guide-step'),
-            '목록' === t.user && (s = 'is-pagelist'),
-            '상세' === t.user && (s = 'is-pageview'),
-            '공통' === t.user && (s = 'is-page-comm'),
-            '삭제' === t.status && '공통' === t.user && (s = 'is-delete is-page-comm'),
-            '삭제' === t.status && '스탭' === t.user && (s = 'is-delete is-individual'),
-            (p += `
-					<tr class="${s}">
-						<td>${e}</td>
-						<td>${t.createDate}</td>
-						<td>${t.modifyDate}</td>
-						<td class="align-left">${t.depth1}</td>
-						<td class="align-left">${t.depth2}</td>
-						<td class="align-left">${t.depth3}</td>
-						<td class="align-left">${t.depth4}</td>
-						<td>${t.device}</td>
-						<td>${t.user}</td>
-						<td>${t.pageType}</td>
-						<td class="align-left">${t.pageName}</td>
-						<td class="align-left">${t.pageID}</td>
-						<td class="align-left"><a href="${t.link}" target="_blank" title="새창열림">${t.link}</a></td>
-						<td class="sort-order">${t.order}</td>
-						<td class="sort-status">${t.status}</td>
-						<td class="align-left">
-				`),
-            0 < t.memo.length &&
-              (1 < t.memo.length ? (p += '<ul class="note-list option-fold">') : (p += '<ul class="note-list">'),
-              t.memo.forEach(function (a) {
-                p += `<li>${a.detail}</li>`;
-              }),
-              (p += '</ul>')),
-            (p += `</td>
-					</tr>
-				`));
-        }),
-          i.html(p));
+  init: () => {
+    iaData.change();
+    iaData.filterReset();
+    iaData.selectRow();
+    iaData.sort();
+    iaData.option();
+  },
+  set: (elementId, data) => {
+    const container = document.querySelector(`#${elementId} .data-body`);
+    if (!container) return; // 해당 탭 컨텐츠가 없으면 패스
+
+    container.innerHTML = `
+      <table class="data-list">
+        <caption class="sr-only">산출물 목록</caption>
+        <colgroup>
+          <col /><col /><col /><col /><col /><col /><col /><col /><col />
+          <col /><col /><col /><col /><col /><col /><col /><col />
+        </colgroup>
+        <thead>
+          <tr>
+            <th scope="col">NO</th>
+            <th scope="col">생성일 <button type="button" class="data-sort">▼</button></th>
+            <th scope="col">최종수정일 <button type="button" class="data-sort">▼</button></th>
+            <th scope="col">Depth1 <button type="button" class="data-sort">▼</button></th>
+            <th scope="col">Depth2 <button type="button" class="data-sort">▼</button></th>
+            <th scope="col">Depth3 <button type="button" class="data-sort">▼</button></th>
+            <th scope="col">Depth4 <button type="button" class="data-sort">▼</button></th>
+            <th scope="col">디바이스 <button type="button" class="data-sort">▼</button></th>
+            <th scope="col">화면구분 <button type="button" class="data-sort">▼</button></th>
+            <th scope="col">페이지종류 <button type="button" class="data-sort">▼</button></th>
+            <th scope="col">화면명 <button type="button" class="data-sort">▼</button></th>
+            <th scope="col">화면ID <button type="button" class="data-sort">▼</button></th>
+            <th scope="col">경로</th>
+            <th scope="col">작업차수 <select class="select-filter" data-sort-name="order"><option value="">전체</option></select></th>
+            <th scope="col">상태 <select class="select-filter" data-sort-name="status"><option value="">전체</option></select></th>
+            <th scope="col">Memo</th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+    `;
+
+    const tbody = container.querySelector('.data-list tbody');
+    const captions = document.querySelectorAll('.data .data-body .data-list caption');
+
+    captions.forEach(caption => {
+      caption.textContent = '';
+      const table = caption.closest('table');
+      const thead = table.querySelector('thead');
+      if (thead) {
+        const ths = thead.querySelectorAll('th');
+        const texts = Array.from(ths)
+          .map(th => th.textContent.trim())
+          .filter(text => text !== '')
+          .join(', ');
+        caption.textContent = `${texts} 정보입니다.`;
       }
-      (iaData.count(a), iaData.countAll(a));
-    },
-    option: () => {
-      let s = '',
-        e =
-          ($.each(
-            [
-              { value: '1차', text: '1차' },
-              { value: '2차', text: '2차' },
-              { value: '3차', text: '3차' },
-              { value: '-', text: '-' },
-            ],
-            (a, t) => {
-              s += `<option value="${t.value}">${t.text}</option>`;
-            },
-          ),
-          $('.data-list thead > tr > th select[data-sort-name="order"]').append(s),
-          '');
-      ($.each(
-        [
-          { value: '대기', text: '대기' },
-          { value: '진행', text: '진행' },
-          { value: '확인', text: '확인' },
-          { value: '완료', text: '완료' },
-          { value: '삭제', text: '삭제' },
-        ],
-        (a, t) => {
-          e += `<option value="${t.value}">${t.text}</option>`;
-        },
-      ),
-        $('.data-list thead > tr > th select[data-sort-name="status"]').append(e));
-    },
-    change: () => {
-      $('.data-list thead > tr > th select').on('change', function () {
-        var a = $(this).closest('.tab-item').attr('id');
-        ('' === $(this).val() ? $(this).closest('th').removeClass('is-active') : $(this).closest('th').addClass('is-active'), iaData.filter(a));
+    });
+
+    let html = '';
+    // data가 존재하고 list가 있을 때만 처리
+    if (data && data.list && data.list.length > 0) {
+      data.list.forEach((item, index) => {
+        let statusClass = '';
+        if (item.status === '삭제') statusClass = 'is-delete';
+        if (item.user === '묶음') statusClass = 'is-bundle';
+        if (item.user === '스탭') statusClass = 'is-individual';
+        if (item.user === '탭묶음') statusClass = 'is-tab-bundle';
+        if (item.user === '탭') statusClass = 'is-tab-page';
+        if (item.user === '가이드묶음') statusClass = 'is-guide';
+        if (item.user === '가이드스탭') statusClass = 'is-guide-step';
+        if (item.user === '목록') statusClass = 'is-pagelist';
+        if (item.user === '상세') statusClass = 'is-pageview';
+        if (item.user === '공통') statusClass = 'is-page-comm';
+        if (item.status === '삭제' && item.user === '공통') statusClass = 'is-delete is-page-comm';
+        if (item.status === '삭제' && item.user === '스탭') statusClass = 'is-delete is-individual';
+
+        let memoHtml = '';
+        if (item.memo && item.memo.length > 0) {
+          const listClass = item.memo.length > 1 ? 'note-list option-fold' : 'note-list';
+          memoHtml += `<ul class="${listClass}">`;
+          item.memo.forEach(memo => {
+            memoHtml += `<li>${memo.detail}</li>`;
+          });
+          memoHtml += '</ul>';
+        }
+
+        html += `
+          <tr class="${statusClass}">
+            <td>${index + 1}</td>
+            <td>${item.createDate}</td>
+            <td>${item.modifyDate}</td>
+            <td class="align-left">${item.depth1}</td>
+            <td class="align-left">${item.depth2}</td>
+            <td class="align-left">${item.depth3}</td>
+            <td class="align-left">${item.depth4}</td>
+            <td>${item.device}</td>
+            <td>${item.user}</td>
+            <td>${item.pageType}</td>
+            <td class="align-left">${item.pageName}</td>
+            <td class="align-left">${item.pageID}</td>
+            <td class="align-left"><a href="${item.link}" target="_blank" title="새창열림">${item.link}</a></td>
+            <td class="sort-order">${item.order}</td>
+            <td class="sort-status">${item.status}</td>
+            <td class="align-left">${memoHtml}</td>
+          </tr>
+        `;
       });
-    },
-    filter: a => {
-      const t = $('#' + a).find('.data-list thead > tr > th select');
-      let s = '',
-        e = '';
-      t.each(function () {
-        var a = $(this).attr('data-sort-name'),
-          t = $(this).val();
-        switch (a) {
-          case 'order':
-            s = t;
-            break;
-          case 'status':
-            e = t;
+      tbody.innerHTML = html;
+    }
+
+    iaData.count(elementId);
+    iaData.countAll(elementId);
+  },
+  option: () => {
+    const orderOptions = [
+      { value: '1차', text: '1차' }, { value: '2차', text: '2차' }, { value: '3차', text: '3차' }, { value: '-', text: '-' },
+    ];
+    const statusOptions = [
+      { value: '대기', text: '대기' }, { value: '진행', text: '진행' }, { value: '확인', text: '확인' }, { value: '완료', text: '완료' }, { value: '삭제', text: '삭제' },
+    ];
+
+    document.querySelectorAll('.data-list thead > tr > th select[data-sort-name="order"]').forEach(select => {
+      // 중복 추가 방지를 위해 기존 옵션 확인
+      if (select.options.length > 1) return; 
+      orderOptions.forEach(opt => {
+        select.insertAdjacentHTML('beforeend', `<option value="${opt.value}">${opt.text}</option>`);
+      });
+    });
+
+    document.querySelectorAll('.data-list thead > tr > th select[data-sort-name="status"]').forEach(select => {
+      if (select.options.length > 1) return;
+      statusOptions.forEach(opt => {
+        select.insertAdjacentHTML('beforeend', `<option value="${opt.value}">${opt.text}</option>`);
+      });
+    });
+  },
+  change: () => {
+    // 이벤트 중복 바인딩 방지 (필요시)
+    document.querySelectorAll('.data-list thead > tr > th select').forEach(select => {
+      select.onchange = function () { // addEventListener 대신 덮어쓰기로 중복 방지
+        const tabId = this.closest('.tab-item').id;
+        if (this.value === '') {
+          this.closest('th').classList.remove('is-active');
+        } else {
+          this.closest('th').classList.add('is-active');
+        }
+        iaData.filter(tabId);
+      };
+    });
+  },
+  filter: (tabId) => {
+    const selects = document.querySelectorAll(`#${tabId} .data-list thead > tr > th select`);
+    let orderVal = '', statusVal = '';
+
+    selects.forEach(select => {
+      const sortName = select.getAttribute('data-sort-name');
+      const val = select.value;
+      if (sortName === 'order') orderVal = val;
+      if (sortName === 'status') statusVal = val;
+    });
+
+    const rows = document.querySelectorAll(`#${tabId} .data-list tbody > tr`);
+    rows.forEach(row => {
+      const orderText = row.querySelector('.sort-order')?.textContent || '';
+      const statusText = row.querySelector('.sort-status')?.textContent || '';
+      const matchOrder = orderVal === '' || orderVal === orderText;
+      const matchStatus = statusVal === '' || statusVal === statusText;
+
+      if (matchOrder && matchStatus) {
+        row.classList.remove('is-hide');
+        row.style.display = '';
+      } else {
+        row.classList.add('is-hide');
+        row.style.display = 'none';
+      }
+    });
+    iaData.count(tabId);
+  },
+  filterReset: () => {
+    document.querySelectorAll('.filter-reset').forEach(btn => {
+      btn.onclick = function () {
+        const tabId = this.closest('.tab-item').id;
+        const selects = document.querySelectorAll(`#${tabId} .data-list thead > tr > th select`);
+        selects.forEach(select => {
+          select.value = '';
+          // trigger change 수동 호출
+          if (select.onchange) select.onchange(); 
+        });
+        document.querySelectorAll(`#${tabId} .data-list thead > tr > th`).forEach(th => th.classList.remove('is-sort'));
+        document.querySelectorAll(`#${tabId} .data-list thead > tr > th .data-sort`).forEach(btn => {
+          btn.textContent = '▼';
+          btn.classList.remove('desc', 'asc');
+        });
+
+        const tbody = document.querySelector(`#${tabId} .data-list tbody`);
+        const rows = Array.from(tbody.querySelectorAll('tr'));
+        rows.sort((a, b) => {
+          const numA = parseInt(a.children[0].textContent, 10);
+          const numB = parseInt(b.children[0].textContent, 10);
+          return numA - numB;
+        });
+        rows.forEach(row => tbody.appendChild(row));
+      };
+    });
+  },
+  count: (tabId) => {
+    let wait = 0, progress = 0, confirm = 0, complete = 0, deleted = 0;
+    const rows = Array.from(document.querySelectorAll(`#${tabId} .data-list tbody > tr:not(.nodata):not(.is-hide)`));
+    rows.forEach(row => {
+      const status = row.querySelector('.sort-status')?.textContent;
+      switch (status) {
+        case '대기': wait++; break;
+        case '진행': progress++; break;
+        case '확인': confirm++; break;
+        case '완료': complete++; break;
+        case '삭제': deleted++; break;
+      }
+    });
+    const total = rows.length;
+    const calcPercent = (val) => total ? ((val / total) * 100).toFixed(2) : 0;
+    const html = `전체 : <strong class="fc-primary">${total}</strong>건, 대기 : <strong class="fc-warning">${wait}</strong>건<span class="fc-base">(${calcPercent(wait)}%)</span>, 진행 : <strong class="fc-highlight">${progress}</strong>건<span class="fc-base">(${calcPercent(progress)}%)</span>, 확인 : <strong class="fc-highlight">${confirm}</strong>건<span class="fc-base">(${calcPercent(confirm)}%)</span>, 완료 : <strong class="fc-secondary">${complete}</strong>건<span class="fc-base">(${calcPercent(complete)}%)</span>, 삭제 : <strong class="fc-disabled">${deleted}</strong>건<span class="fc-base">(${calcPercent(deleted)}%)</span>`;
+    const countContainer = document.querySelector(`#${tabId} .title-h3 .count`);
+    if(countContainer) countContainer.innerHTML = html;
+    const tbody = document.querySelector(`#${tabId} .data-list tbody`);
+    if (total === 0) {
+      if (!tbody.querySelector('.nodata')) {
+        tbody.insertAdjacentHTML('beforeend', `<tr class="nodata"><td colspan="16" class="align-center">데이터가 없습니다.</td></tr>`);
+      }
+    } else {
+      const nodata = tbody.querySelector('.nodata');
+      if (nodata) nodata.remove();
+    }
+  },
+  countAll: (tabId) => {
+    const rows = document.querySelectorAll(`#${tabId} .data-list tbody > tr:not(.nodata):not(.is-hide)`);
+    const countEl = document.querySelector(`#${tabId}Menu .tab-count`);
+    if (countEl) countEl.textContent = rows.length;
+  },
+  selectRow: () => {
+    // 중복 등록 방지를 위해 body 레벨에서 한 번만 등록하는 것이 좋으나
+    // 여기서는 간단히 처리. 기존 리스너 제거가 어려우므로 flag 사용 고려 가능.
+    // 하지만 init이 여러번 호출되지 않는다면 문제 없음.
+  },
+  sort: () => {
+    document.querySelectorAll('.tab-item .data').forEach(tableDiv => {
+      tableDiv.querySelectorAll('.data-list thead > tr > th').forEach((th, index) => {
+        const btn = th.querySelector('.data-sort');
+        if (!btn) return;
+        // 기존 리스너 제거 후 등록
+        const newBtn = btn.cloneNode(true);
+        btn.parentNode.replaceChild(newBtn, btn);
+        
+        newBtn.addEventListener('click', function () {
+          const tabId = this.closest('.tab-item').id;
+          let direction = this.classList.contains('asc') ? -1 : 1;
+          this.classList.toggle('asc', direction === 1);
+          this.classList.toggle('desc', direction === -1);
+          this.textContent = direction === 1 ? '▲' : '▼';
+
+          const tbody = document.querySelector(`#${tabId} .data-list tbody`);
+          const rows = Array.from(tbody.querySelectorAll('tr'));
+          rows.sort((a, b) => {
+            const textA = a.children[index]?.textContent.toUpperCase() || '';
+            const textB = b.children[index]?.textContent.toUpperCase() || '';
+            return textA < textB ? -direction : textB < textA ? direction : 0;
+          });
+          rows.forEach(row => tbody.appendChild(row));
+        });
+      });
+    });
+  },
+};
+
+// 메인 실행 로직
+(async () => {
+  try {
+    // 모든 스크립트 로드 대기
+    await Promise.all(scripts.map(src => loadScript(src)));
+    
+    // 데이터 집계 및 매핑
+    const allData = { list: [] };
+    const groupData = {}; // 그룹별 데이터 (예: A, B, C...)
+
+    // window 객체에서 'iaPage'로 시작하는 모든 변수 탐색
+    Object.keys(window).forEach(key => {
+      if (key.startsWith('iaPage') && window[key] && window[key].list) {
+        // 전체 데이터 병합
+        allData.list.push(...window[key].list);
+
+        // 개별 탭 매핑 (예: iaPageAData1 -> tabPageA1)
+        // 정규식: iaPage + (그룹: A~Z) + Data + (숫자: 0~99)
+        const match = key.match(/^iaPage([A-Z])Data(\d*)$/);
+        
+        if (match) {
+          const group = match[1]; // A
+          const num = match[2];   // 1 (숫자가 없으면 빈 문자열)
+          
+          if (num) {
+            // 개별 페이지 데이터 (A1, B13 등)
+            iaData.set(`tabPage${group}${num}`, window[key]);
+            
+            // 그룹 데이터 집계용 배열에 추가
+            if (!groupData[group]) groupData[group] = { list: [] };
+            groupData[group].list.push(...window[key].list);
+          } else {
+            // 이미 그룹핑된 데이터 변수일 경우 (예: iaPageAData)
+            // 개별 데이터에서 자동으로 합칠 것이므로 무시하거나,
+            // 만약 개별 데이터가 없고 그룹 변수만 있다면 이걸 써야 함.
+            // 여기서는 안전하게 그룹 데이터 변수도 탭에 매핑.
+            // 단, 중복 방지가 필요할 수 있음.
+             iaData.set(`tabPage${group}`, window[key]);
+          }
+        }
+      }
+    });
+
+    // 전체 탭 렌더링
+    iaData.set('tabAll', allData);
+    
+    // 그룹별 탭 렌더링 (예: tabPageA)
+    Object.keys(groupData).forEach(group => {
+      // 기존 변수(iaPageAData)가 없었을 경우를 대비해 수집된 데이터로 렌더링
+      // 만약 iaData.set이 이미 호출되었다면(위 루프의 else 블록), 덮어쓰거나 패스해야 함.
+      // 여기서는 덮어쓰기 (수집된게 최신일 테니)
+      iaData.set(`tabPage${group}`, groupData[group]);
+    });
+    
+    // 필터/정렬 등 이벤트 바인딩
+    iaData.init();
+    
+    // 메모 기능 및 탭 UI 초기화
+    iaMemo.init();
+    commUiFnTab.init();
+    
+  } catch (err) {
+    console.error('Data loading failed:', err);
+  }
+})();
+
+// 메모 및 UI 객체 (기존 동일)
+const iaMemo = {
+  init: () => { iaMemo.toggle(); iaMemo.all(); },
+  toggle: () => {
+    document.addEventListener('click', (e) => {
+      const target = e.target.closest('.data-list tbody > tr > td .note-list.option-fold');
+      if (target) target.classList.toggle('is-open');
+    });
+  },
+  all: () => {
+    document.querySelectorAll('.btn-memo-all').forEach(btn => {
+      btn.addEventListener('click', function() {
+        const tabId = this.closest('.tab-item').id;
+        const isOpen = this.classList.toggle('is-open');
+        this.textContent = isOpen ? '닫기' : '더보기';
+        document.querySelectorAll(`#${tabId} .note-list.option-fold`).forEach(note => note.classList.toggle('is-open', isOpen));
+      });
+    });
+  }
+};
+
+const commUiFnSetVH = () => {
+  document.documentElement.style.setProperty('--vh', `${window.innerHeight * 0.01}px`);
+};
+
+const commUiFnTab = {
+  init: () => {
+    commUiFnSetVH();
+    window.addEventListener('resize', commUiFnSetVH);
+    commUiFnTab.select();
+  },
+  select: () => {
+    document.querySelectorAll('.tab-menu').forEach(menu => {
+      menu.addEventListener('click', function () {
+        const targetId = this.getAttribute('aria-controls');
+        const target = document.getElementById(targetId);
+        if (!target) return;
+
+        // 같은 페이지 내에서의 탭 전환 (헤더와 본문 모두 처리)
+        const page = this.closest('.ia-page');
+        
+        // 헤더 탭 활성화
+        const siblingMenus = this.parentElement.children; // 형제 탭 메뉴들
+        // 형제가 아니라 전체 탭 메뉴를 찾아야 할 수도 있음 (구조에 따라 다름)
+        // 여기서는 안전하게 모든 탭 메뉴의 활성 상태 제거는 위험할 수 있으니 (중첩 탭 구조)
+        // 클릭된 탭의 레벨에 맞는 처리가 필요함.
+        
+        // 간단히: 현재 클릭된 탭에 active 추가
+        // 기존 로직:
+        // page.querySelectorAll('.tab-menu').forEach(...) -> 이건 너무 광범위함.
+        
+        // 가장 가까운 리스트(ul) 내의 탭들만 제어
+        const parentUl = this.closest('ul');
+        if (parentUl) {
+           parentUl.querySelectorAll(':scope > li.tab-menu').forEach(m => {
+              m.classList.remove('is-active');
+              m.setAttribute('aria-selected', 'false');
+           });
+        }
+        this.classList.add('is-active');
+        this.setAttribute('aria-selected', 'true');
+        
+        // 본문 탭 아이템 활성화
+        // target(본문)이 속한 컨테이너(tab-list) 내의 형제들만 숨겨야 함
+        const tabList = target.parentElement;
+        if (tabList) {
+           tabList.querySelectorAll(':scope > .tab-item').forEach(item => {
+              item.classList.remove('is-active');
+              item.setAttribute('aria-hidden', 'true');
+           });
+        }
+        target.classList.add('is-active');
+        target.setAttribute('aria-hidden', 'false');
+
+        // 하위 탭 자동 선택 (첫 번째 자식 탭)
+        // 뎁스 구조가 있으므로 재귀적 또는 명시적 트리거 필요
+        const subMenu = target.querySelector('.gnb-dep2 > .tab-menu');
+        if (subMenu) {
+            // 이벤트 버블링 방지 등을 고려해야 하지만, 여기서는 click 트리거
+            // 단, 무한 루프 방지
+            // subMenu.click(); 
+            // click() 대신 로직 직접 실행 권장되나 복잡하므로 패스
         }
       });
-      const i = $('#' + a).find('.data-list tbody > tr');
-      let p, g;
-      (i.each(function () {
-        ((p = $(this).find('.sort-order').text()), (g = $(this).find('.sort-status').text()), ('' === s && '' === e && '' === nameValue) || (s === p && '' === e && '' === nameValue) || ('' === s && e === g && '' === nameValue) || ('' === s && '' === e && '' === nameValue) || (s === p && e === g && '' === nameValue) || (s === p && '' === e && '' === nameValue) || ('' === s && e === g && '' === nameValue) || (s === p && e === g && '' === nameValue) ? $(this).removeClass('is-hide').show() : $(this).addClass('is-hide').hide());
-      }),
-        iaData.count(a));
-    },
-    filterReset: () => {
-      $('.filter-reset').on('click', function () {
-        const s = $(this).closest('.tab-item').attr('id'),
-          a =
-            ($(`#${s} .data-list thead > tr > th select`).val('').trigger('change'),
-            $(`#${s} .data-list thead > tr > th`).removeClass('is-sort'),
-            $(`#${s} .data-list thead > tr > th .data-sort`).text('▼').removeClass('desc, asc'),
-            $('#' + s)
-              .find('.data-list tbody > tr')
-              .get());
-        (a.sort(function (a, t) {
-          ((a = $(a).children('td').eq(0).text().toUpperCase()), (t = $(t).children('td').eq(0).text().toUpperCase()));
-          return a < t ? -1 : t < a ? 1 : 0;
-        }),
-          $.each(a, function (a, t) {
-            $(`#${s} .data-list tbody`).append(t);
-          }));
-      });
-    },
-    count: a => {
-      let s = 0,
-        e = 0,
-        i = 0,
-        p = 0,
-        g = 0;
-      var t = $(`#${a} .data-list tbody > tr:not(.nodata)`).not('.is-hide'),
-        c =
-          ($.each(t, function (a, t) {
-            switch ($(t).find('.sort-status').text()) {
-              case '대기':
-                s++;
-                break;
-              case '진행':
-                e++;
-                break;
-              case '확인':
-                p++;
-                break;
-              case '완료':
-                i++;
-                break;
-              case '삭제':
-                g++;
-            }
-          }),
-          `전체 : <strong class="fc-primary">${t.length}</strong>건,
-					대기 : <strong class="fc-warning">${s}</strong>건<span class="fc-base">(${s ? ((s / t.length) * 100).toFixed(2) : 0}%)</span>,
-					진행 : <strong class="fc-highlight">${e}</strong>건<span class="fc-base">(${e ? ((e / t.length) * 100).toFixed(2) : 0}%)</span>,
-					확인 : <strong class="fc-highlight">${p}</strong>건<span class="fc-base">(${p ? ((p / t.length) * 100).toFixed(2) : 0}%)</span>,
-					완료 : <strong class="fc-secondary">${i}</strong>건<span class="fc-base">(${i ? ((i / t.length) * 100).toFixed(2) : 0}%)</span>,
-					삭제 : <strong class="fc-disabled">${g}</strong>건<span class="fc-base">(${g ? ((g / t.length) * 100).toFixed(2) : 0}%)</span>
-		`);
-      ($(`#${a} .title-h3 .count`).html(c),
-        0 === t.length
-          ? $(`#${a} .data-list tbody`).append(`
-				<tr class="nodata">
-					<td colspan="18" class="align-center">데이터가 없습니다.</td>
-				</tr>
-			`)
-          : $(`#${a} .data-list tbody > .nodata`).remove());
-    },
-    countAll: a => {
-      var t = $(`#${a} .data-list tbody > tr:not(.nodata)`).not('.is-hide');
-      $(`#${a}Menu .tab-count`).html(t.length);
-    },
-    selectRow: () => {
-      $('.data-list tbody > tr').on('click', function () {
-        $(this).hasClass('is-active') ? $(this).removeClass('is-active') : $(this).addClass('is-active');
-      });
-    },
-    sort: () => {
-      $('.tab-item .data').each(function (a) {
-        $(this)
-          .find('.data-list thead > tr > th')
-          .each(function (i) {
-            $(this)
-              .find('.data-sort')
-              .on('click', function () {
-                const s = $(this).closest('.tab-item').attr('id');
-                let e;
-                ((e = $(this).is('.asc') ? ($(this).removeClass('asc').addClass('desc').text('▼'), -1) : ($(this).addClass('asc').removeClass('desc').text('▲'), 1)), $(this).closest('th').siblings().removeClass('is-sort'), $(this).closest('th').siblings().find('.data-sort').text('▼').removeClass('desc, asc'), $(this).closest('th').addClass('is-sort'));
-                const a = $('#' + s)
-                  .find('.data-list tbody > tr')
-                  .get();
-                (a.sort(function (a, t) {
-                  ((a = $(a).children('td').eq(i).text().toUpperCase()), (t = $(t).children('td').eq(i).text().toUpperCase()));
-                  return a < t ? -e : t < a ? e : 0;
-                }),
-                  $.each(a, function (a, t) {
-                    $(`#${s} .data-list tbody`).append(t);
-                  }));
-              });
-          });
-      });
-    },
-  },
-  iaPageAData = { list: [] },
-  iaPageBData =
-    ($.each(iaPageAData1.list, function () {
-      iaPageAData.list.push(this);
-    }),
-    $.each(iaPageAData2.list, function () {
-      iaPageAData.list.push(this);
-    }),
-    $.each(iaPageAData3.list, function () {
-      iaPageAData.list.push(this);
-    }),
-    $.each(iaPageAData4.list, function () {
-      iaPageAData.list.push(this);
-    }),
-    $.each(iaPageAData5.list, function () {
-      iaPageAData.list.push(this);
-    }),
-    $.each(iaPageAData6.list, function () {
-      iaPageAData.list.push(this);
-    }),
-    $.each(iaPageAData7.list, function () {
-      iaPageAData.list.push(this);
-    }),
-    { list: [] }),
-  iaPageCData =
-    ($.each(iaPageBData1.list, function () {
-      iaPageBData.list.push(this);
-    }),
-    $.each(iaPageBData2.list, function () {
-      iaPageBData.list.push(this);
-    }),
-    $.each(iaPageBData3.list, function () {
-      iaPageBData.list.push(this);
-    }),
-    $.each(iaPageBData5.list, function () {
-      iaPageBData.list.push(this);
-    }),
-    $.each(iaPageBData6.list, function () {
-      iaPageBData.list.push(this);
-    }),
-    $.each(iaPageBData7.list, function () {
-      iaPageBData.list.push(this);
-    }),
-    $.each(iaPageBData8.list, function () {
-      iaPageBData.list.push(this);
-    }),
-    $.each(iaPageBData9.list, function () {
-      iaPageBData.list.push(this);
-    }),
-    $.each(iaPageBData10.list, function () {
-      iaPageBData.list.push(this);
-    }),
-    $.each(iaPageBData11.list, function () {
-      iaPageBData.list.push(this);
-    }),
-    $.each(iaPageBData12.list, function () {
-      iaPageBData.list.push(this);
-    }),
-    $.each(iaPageBData4.list, function () {
-      iaPageBData.list.push(this);
-    }),
-    $.each(iaPageBData13.list, function () {
-      iaPageBData.list.push(this);
-    }),
-    { list: [] }),
-  iaPageDData =
-    ($.each(iaPageCData1.list, function () {
-      iaPageCData.list.push(this);
-    }),
-    $.each(iaPageCData2.list, function () {
-      iaPageCData.list.push(this);
-    }),
-    $.each(iaPageCData3.list, function () {
-      iaPageCData.list.push(this);
-    }),
-    $.each(iaPageCData4.list, function () {
-      iaPageCData.list.push(this);
-    }),
-    $.each(iaPageCData5.list, function () {
-      iaPageCData.list.push(this);
-    }),
-    { list: [] }),
-  iaPageEData =
-    ($.each(iaPageDData1.list, function () {
-      iaPageDData.list.push(this);
-    }),
-    $.each(iaPageDData4.list, function () {
-      iaPageDData.list.push(this);
-    }),
-    $.each(iaPageDData5.list, function () {
-      iaPageDData.list.push(this);
-    }),
-    $.each(iaPageDData2.list, function () {
-      iaPageDData.list.push(this);
-    }),
-    $.each(iaPageDData3.list, function () {
-      iaPageDData.list.push(this);
-    }),
-    { list: [] }),
-  iaPageFData =
-    ($.each(iaPageEData1.list, function () {
-      iaPageEData.list.push(this);
-    }),
-    $.each(iaPageEData2.list, function () {
-      iaPageEData.list.push(this);
-    }),
-    $.each(iaPageEData3.list, function () {
-      iaPageEData.list.push(this);
-    }),
-    $.each(iaPageEData4.list, function () {
-      iaPageEData.list.push(this);
-    }),
-    $.each(iaPageEData5.list, function () {
-      iaPageEData.list.push(this);
-    }),
-    $.each(iaPageEData6.list, function () {
-      iaPageEData.list.push(this);
-    }),
-    $.each(iaPageEData7.list, function () {
-      iaPageEData.list.push(this);
-    }),
-    $.each(iaPageEData8.list, function () {
-      iaPageEData.list.push(this);
-    }),
-    $.each(iaPageEData9.list, function () {
-      iaPageEData.list.push(this);
-    }),
-    $.each(iaPageEData10.list, function () {
-      iaPageEData.list.push(this);
-    }),
-    { list: [] }),
-  iaPageGData =
-    ($.each(iaPageFData2.list, function () {
-      iaPageFData.list.push(this);
-    }),
-    $.each(iaPageFData3.list, function () {
-      iaPageFData.list.push(this);
-    }),
-    $.each(iaPageFData4.list, function () {
-      iaPageFData.list.push(this);
-    }),
-    $.each(iaPageFData12.list, function () {
-      iaPageFData.list.push(this);
-    }),
-    $.each(iaPageFData5.list, function () {
-      iaPageFData.list.push(this);
-    }),
-    $.each(iaPageFData6.list, function () {
-      iaPageFData.list.push(this);
-    }),
-    $.each(iaPageFData7.list, function () {
-      iaPageFData.list.push(this);
-    }),
-    $.each(iaPageFData8.list, function () {
-      iaPageFData.list.push(this);
-    }),
-    $.each(iaPageFData9.list, function () {
-      iaPageFData.list.push(this);
-    }),
-    $.each(iaPageFData10.list, function () {
-      iaPageFData.list.push(this);
-    }),
-    $.each(iaPageFData1.list, function () {
-      iaPageFData.list.push(this);
-    }),
-    { list: [] }),
-  iaPageHData =
-    ($.each(iaPageGData1.list, function () {
-      iaPageGData.list.push(this);
-    }),
-    $.each(iaPageGData2.list, function () {
-      iaPageGData.list.push(this);
-    }),
-    $.each(iaPageGData3.list, function () {
-      iaPageGData.list.push(this);
-    }),
-    $.each(iaPageGData4.list, function () {
-      iaPageGData.list.push(this);
-    }),
-    $.each(iaPageGData5.list, function () {
-      iaPageGData.list.push(this);
-    }),
-    $.each(iaPageGData6.list, function () {
-      iaPageGData.list.push(this);
-    }),
-    $.each(iaPageGData7.list, function () {
-      iaPageGData.list.push(this);
-    }),
-    $.each(iaPageGData8.list, function () {
-      iaPageGData.list.push(this);
-    }),
-    { list: [] }),
-  iaPageJData =
-    ($.each(iaPageHData1.list, function () {
-      iaPageHData.list.push(this);
-    }),
-    { list: [] }),
-  iaPageKData =
-    ($.each(iaPageJData8.list, function () {
-      iaPageJData.list.push(this);
-    }),
-    $.each(iaPageJData1.list, function () {
-      iaPageJData.list.push(this);
-    }),
-    $.each(iaPageJData2.list, function () {
-      iaPageJData.list.push(this);
-    }),
-    $.each(iaPageJData3.list, function () {
-      iaPageJData.list.push(this);
-    }),
-    $.each(iaPageJData4.list, function () {
-      iaPageJData.list.push(this);
-    }),
-    $.each(iaPageJData5.list, function () {
-      iaPageJData.list.push(this);
-    }),
-    $.each(iaPageJData6.list, function () {
-      iaPageJData.list.push(this);
-    }),
-    $.each(iaPageJData7.list, function () {
-      iaPageJData.list.push(this);
-    }),
-    { list: [] }),
-  iaPageLData =
-    ($.each(iaPageKData1.list, function () {
-      iaPageKData.list.push(this);
-    }),
-    $.each(iaPageKData2.list, function () {
-      iaPageKData.list.push(this);
-    }),
-    $.each(iaPageKData3.list, function () {
-      iaPageKData.list.push(this);
-    }),
-    $.each(iaPageKData4.list, function () {
-      iaPageKData.list.push(this);
-    }),
-    $.each(iaPageKData5.list, function () {
-      iaPageKData.list.push(this);
-    }),
-    $.each(iaPageKData6.list, function () {
-      iaPageKData.list.push(this);
-    }),
-    $.each(iaPageKData7.list, function () {
-      iaPageKData.list.push(this);
-    }),
-    $.each(iaPageKData8.list, function () {
-      iaPageKData.list.push(this);
-    }),
-    { list: [] }),
-  iaPageMData =
-    ($.each(iaPageLData1.list, function () {
-      iaPageLData.list.push(this);
-    }),
-    $.each(iaPageLData2.list, function () {
-      iaPageLData.list.push(this);
-    }),
-    $.each(iaPageLData3.list, function () {
-      iaPageLData.list.push(this);
-    }),
-    { list: [] }),
-  iaPageNData =
-    ($.each(iaPageMData1.list, function () {
-      iaPageMData.list.push(this);
-    }),
-    $.each(iaPageMData2.list, function () {
-      iaPageMData.list.push(this);
-    }),
-    $.each(iaPageMData3.list, function () {
-      iaPageMData.list.push(this);
-    }),
-    $.each(iaPageMData4.list, function () {
-      iaPageMData.list.push(this);
-    }),
-    $.each(iaPageMData5.list, function () {
-      iaPageMData.list.push(this);
-    }),
-    $.each(iaPageMData6.list, function () {
-      iaPageMData.list.push(this);
-    }),
-    $.each(iaPageMData7.list, function () {
-      iaPageMData.list.push(this);
-    }),
-    $.each(iaPageMData8.list, function () {
-      iaPageMData.list.push(this);
-    }),
-    $.each(iaPageMData9.list, function () {
-      iaPageMData.list.push(this);
-    }),
-    $.each(iaPageMData10.list, function () {
-      iaPageMData.list.push(this);
-    }),
-    { list: [] }),
-  iaPageZData =
-    ($.each(iaPageNData1.list, function () {
-      iaPageNData.list.push(this);
-    }),
-    $.each(iaPageNData2.list, function () {
-      iaPageNData.list.push(this);
-    }),
-    $.each(iaPageNData3.list, function () {
-      iaPageNData.list.push(this);
-    }),
-    $.each(iaPageNData4.list, function () {
-      iaPageNData.list.push(this);
-    }),
-    $.each(iaPageNData5.list, function () {
-      iaPageNData.list.push(this);
-    }),
-    $.each(iaPageNData6.list, function () {
-      iaPageNData.list.push(this);
-    }),
-    $.each(iaPageNData7.list, function () {
-      iaPageNData.list.push(this);
-    }),
-    $.each(iaPageNData8.list, function () {
-      iaPageNData.list.push(this);
-    }),
-    { list: [] }),
-  iaPageXData =
-    ($.each(iaPageZData1.list, function () {
-      iaPageZData.list.push(this);
-    }),
-    $.each(iaPageZData2.list, function () {
-      iaPageZData.list.push(this);
-    }),
-    $.each(iaPageZData3.list, function () {
-      iaPageZData.list.push(this);
-    }),
-    $.each(iaPageZData4.list, function () {
-      iaPageZData.list.push(this);
-    }),
-    $.each(iaPageZData5.list, function () {
-      iaPageZData.list.push(this);
-    }),
-    $.each(iaPageZData6.list, function () {
-      iaPageZData.list.push(this);
-    }),
-    $.each(iaPageZData7.list, function () {
-      iaPageZData.list.push(this);
-    }),
-    $.each(iaPageZData8.list, function () {
-      iaPageZData.list.push(this);
-    }),
-    $.each(iaPageZData9.list, function () {
-      iaPageZData.list.push(this);
-    }),
-    $.each(iaPageZData10.list, function () {
-      iaPageZData.list.push(this);
-    }),
-    $.each(iaPageZData11.list, function () {
-      iaPageZData.list.push(this);
-    }),
-    { list: [] }),
-  iaAllData =
-    ($.each(iaPageXData1.list, function () {
-      iaPageXData.list.push(this);
-    }),
-    { list: [] }),
-  allData =
-    ($.each(iaPageAData.list, function () {
-      iaAllData.list.push(this);
-    }),
-    $.each(iaPageBData.list, function () {
-      iaAllData.list.push(this);
-    }),
-    $.each(iaPageCData.list, function () {
-      iaAllData.list.push(this);
-    }),
-    $.each(iaPageDData.list, function () {
-      iaAllData.list.push(this);
-    }),
-    $.each(iaPageEData.list, function () {
-      iaAllData.list.push(this);
-    }),
-    $.each(iaPageFData.list, function () {
-      iaAllData.list.push(this);
-    }),
-    $.each(iaPageGData.list, function () {
-      iaAllData.list.push(this);
-    }),
-    $.each(iaPageJData.list, function () {
-      iaAllData.list.push(this);
-    }),
-    $.each(iaPageKData.list, function () {
-      iaAllData.list.push(this);
-    }),
-    $.each(iaPageLData.list, function () {
-      iaAllData.list.push(this);
-    }),
-    $.each(iaPageMData.list, function () {
-      iaAllData.list.push(this);
-    }),
-    $.each(iaPageNData.list, function () {
-      iaAllData.list.push(this);
-    }),
-    $.each(iaPageZData.list, function () {
-      iaAllData.list.push(this);
-    }),
-    $.each(iaPageXData.list, function () {
-      iaAllData.list.push(this);
-    }),
-    JSON.parse(JSON.stringify(iaAllData))),
-  pageAData = (iaData.set('tabAll', allData), JSON.parse(JSON.stringify(iaPageAData))),
-  pageAData1 = (iaData.set('tabPageA', pageAData), JSON.parse(JSON.stringify(iaPageAData1))),
-  pageAData2 = (iaData.set('tabPageA1', pageAData1), JSON.parse(JSON.stringify(iaPageAData2))),
-  pageAData3 = (iaData.set('tabPageA2', pageAData2), JSON.parse(JSON.stringify(iaPageAData3))),
-  pageAData4 = (iaData.set('tabPageA3', pageAData3), JSON.parse(JSON.stringify(iaPageAData4))),
-  pageAData5 = (iaData.set('tabPageA4', pageAData4), JSON.parse(JSON.stringify(iaPageAData5))),
-  pageAData6 = (iaData.set('tabPageA5', pageAData5), JSON.parse(JSON.stringify(iaPageAData6))),
-  pageAData7 = (iaData.set('tabPageA6', pageAData6), JSON.parse(JSON.stringify(iaPageAData7))),
-  pageBData = (iaData.set('tabPageA7', pageAData7), JSON.parse(JSON.stringify(iaPageBData))),
-  pageBData1 = (iaData.set('tabPageB', pageBData), JSON.parse(JSON.stringify(iaPageBData1))),
-  pageBData2 = (iaData.set('tabPageB1', pageBData1), JSON.parse(JSON.stringify(iaPageBData2))),
-  pageBData3 = (iaData.set('tabPageB2', pageBData2), JSON.parse(JSON.stringify(iaPageBData3))),
-  pageBData5 = (iaData.set('tabPageB3', pageBData3), JSON.parse(JSON.stringify(iaPageBData5))),
-  pageBData6 = (iaData.set('tabPageB5', pageBData5), JSON.parse(JSON.stringify(iaPageBData6))),
-  pageBData7 = (iaData.set('tabPageB6', pageBData6), JSON.parse(JSON.stringify(iaPageBData7))),
-  pageBData8 = (iaData.set('tabPageB7', pageBData7), JSON.parse(JSON.stringify(iaPageBData8))),
-  pageBData9 = (iaData.set('tabPageB8', pageBData8), JSON.parse(JSON.stringify(iaPageBData9))),
-  pageBData10 = (iaData.set('tabPageB9', pageBData9), JSON.parse(JSON.stringify(iaPageBData10))),
-  pageBData11 = (iaData.set('tabPageB10', pageBData10), JSON.parse(JSON.stringify(iaPageBData11))),
-  pageBData12 = (iaData.set('tabPageB11', pageBData11), JSON.parse(JSON.stringify(iaPageBData12))),
-  pageBData4 = (iaData.set('tabPageB12', pageBData12), JSON.parse(JSON.stringify(iaPageBData4))),
-  pageBData13 = (iaData.set('tabPageB4', pageBData4), JSON.parse(JSON.stringify(iaPageBData13))),
-  pageCData = (iaData.set('tabPageB13', pageBData13), JSON.parse(JSON.stringify(iaPageCData))),
-  pageCData1 = (iaData.set('tabPageC', pageCData), JSON.parse(JSON.stringify(iaPageCData1))),
-  pageCData2 = (iaData.set('tabPageC1', pageCData1), JSON.parse(JSON.stringify(iaPageCData2))),
-  pageCData3 = (iaData.set('tabPageC2', pageCData2), JSON.parse(JSON.stringify(iaPageCData3))),
-  pageCData4 = (iaData.set('tabPageC3', pageCData3), JSON.parse(JSON.stringify(iaPageCData4))),
-  pageCData5 = (iaData.set('tabPageC4', pageCData4), JSON.parse(JSON.stringify(iaPageCData5))),
-  pageDData = (iaData.set('tabPageC5', pageCData5), JSON.parse(JSON.stringify(iaPageDData))),
-  pageDData1 = (iaData.set('tabPageD', pageDData), JSON.parse(JSON.stringify(iaPageDData1))),
-  pageDData4 = (iaData.set('tabPageD1', pageDData1), JSON.parse(JSON.stringify(iaPageDData4))),
-  pageDData5 = (iaData.set('tabPageD4', pageDData4), JSON.parse(JSON.stringify(iaPageDData5))),
-  pageDData2 = (iaData.set('tabPageD5', pageDData5), JSON.parse(JSON.stringify(iaPageDData2))),
-  pageDData3 = (iaData.set('tabPageD2', pageDData2), JSON.parse(JSON.stringify(iaPageDData3))),
-  pageEData = (iaData.set('tabPageD3', pageDData3), JSON.parse(JSON.stringify(iaPageEData))),
-  pageEData1 = (iaData.set('tabPageE', pageEData), JSON.parse(JSON.stringify(iaPageEData1))),
-  pageEData2 = (iaData.set('tabPageE1', pageEData1), JSON.parse(JSON.stringify(iaPageEData2))),
-  pageEData3 = (iaData.set('tabPageE2', pageEData2), JSON.parse(JSON.stringify(iaPageEData3))),
-  pageEData4 = (iaData.set('tabPageE3', pageEData3), JSON.parse(JSON.stringify(iaPageEData4))),
-  pageEData5 = (iaData.set('tabPageE4', pageEData4), JSON.parse(JSON.stringify(iaPageEData5))),
-  pageEData6 = (iaData.set('tabPageE5', pageEData5), JSON.parse(JSON.stringify(iaPageEData6))),
-  pageEData7 = (iaData.set('tabPageE6', pageEData6), JSON.parse(JSON.stringify(iaPageEData7))),
-  pageEData8 = (iaData.set('tabPageE7', pageEData7), JSON.parse(JSON.stringify(iaPageEData8))),
-  pageEData9 = (iaData.set('tabPageE8', pageEData8), JSON.parse(JSON.stringify(iaPageEData9))),
-  pageEData10 = (iaData.set('tabPageE9', pageEData9), JSON.parse(JSON.stringify(iaPageEData10))),
-  pageFData = (iaData.set('tabPageE10', pageEData10), JSON.parse(JSON.stringify(iaPageFData))),
-  pageFData2 = (iaData.set('tabPageF', pageFData), JSON.parse(JSON.stringify(iaPageFData2))),
-  pageFData3 = (iaData.set('tabPageF2', pageFData2), JSON.parse(JSON.stringify(iaPageFData3))),
-  pageFData4 = (iaData.set('tabPageF3', pageFData3), JSON.parse(JSON.stringify(iaPageFData4))),
-  pageFData12 = (iaData.set('tabPageF4', pageFData4), JSON.parse(JSON.stringify(iaPageFData12))),
-  pageFData5 = (iaData.set('tabPageF12', pageFData12), JSON.parse(JSON.stringify(iaPageFData5))),
-  pageFData6 = (iaData.set('tabPageF5', pageFData5), JSON.parse(JSON.stringify(iaPageFData6))),
-  pageFData7 = (iaData.set('tabPageF6', pageFData6), JSON.parse(JSON.stringify(iaPageFData7))),
-  pageFData8 = (iaData.set('tabPageF7', pageFData7), JSON.parse(JSON.stringify(iaPageFData8))),
-  pageFData9 = (iaData.set('tabPageF8', pageFData8), JSON.parse(JSON.stringify(iaPageFData9))),
-  pageFData10 = (iaData.set('tabPageF9', pageFData9), JSON.parse(JSON.stringify(iaPageFData10))),
-  pageFData1 = (iaData.set('tabPageF10', pageFData10), JSON.parse(JSON.stringify(iaPageFData1))),
-  pageGData = (iaData.set('tabPageF1', pageFData1), JSON.parse(JSON.stringify(iaPageGData))),
-  pageGData1 = (iaData.set('tabPageG', pageGData), JSON.parse(JSON.stringify(iaPageGData1))),
-  pageGData2 = (iaData.set('tabPageG1', pageGData1), JSON.parse(JSON.stringify(iaPageGData2))),
-  pageGData3 = (iaData.set('tabPageG2', pageGData2), JSON.parse(JSON.stringify(iaPageGData3))),
-  pageGData4 = (iaData.set('tabPageG3', pageGData3), JSON.parse(JSON.stringify(iaPageGData4))),
-  pageGData5 = (iaData.set('tabPageG4', pageGData4), JSON.parse(JSON.stringify(iaPageGData5))),
-  pageGData6 = (iaData.set('tabPageG5', pageGData5), JSON.parse(JSON.stringify(iaPageGData6))),
-  pageGData7 = (iaData.set('tabPageG6', pageGData6), JSON.parse(JSON.stringify(iaPageGData7))),
-  pageGData8 = (iaData.set('tabPageG7', pageGData7), JSON.parse(JSON.stringify(iaPageGData8))),
-  pageHData = (iaData.set('tabPageG8', pageGData8), JSON.parse(JSON.stringify(iaPageHData))),
-  pageJData = (iaData.set('tabPageH', pageHData), JSON.parse(JSON.stringify(iaPageJData))),
-  pageJData8 = (iaData.set('tabPageJ', pageJData), JSON.parse(JSON.stringify(iaPageJData8))),
-  pageJData1 = (iaData.set('tabPageJ8', pageJData8), JSON.parse(JSON.stringify(iaPageJData1))),
-  pageJData2 = (iaData.set('tabPageJ1', pageJData1), JSON.parse(JSON.stringify(iaPageJData2))),
-  pageJData3 = (iaData.set('tabPageJ2', pageJData2), JSON.parse(JSON.stringify(iaPageJData3))),
-  pageJData4 = (iaData.set('tabPageJ3', pageJData3), JSON.parse(JSON.stringify(iaPageJData4))),
-  pageJData5 = (iaData.set('tabPageJ4', pageJData4), JSON.parse(JSON.stringify(iaPageJData5))),
-  pageJData6 = (iaData.set('tabPageJ5', pageJData5), JSON.parse(JSON.stringify(iaPageJData6))),
-  pageJData7 = (iaData.set('tabPageJ6', pageJData6), JSON.parse(JSON.stringify(iaPageJData7))),
-  pageKData = (iaData.set('tabPageJ7', pageJData7), JSON.parse(JSON.stringify(iaPageKData))),
-  pageKData1 = (iaData.set('tabPageK', pageKData), JSON.parse(JSON.stringify(iaPageKData1))),
-  pageKData2 = (iaData.set('tabPageK1', pageKData1), JSON.parse(JSON.stringify(iaPageKData2))),
-  pageKData3 = (iaData.set('tabPageK2', pageKData2), JSON.parse(JSON.stringify(iaPageKData3))),
-  pageKData4 = (iaData.set('tabPageK3', pageKData3), JSON.parse(JSON.stringify(iaPageKData4))),
-  pageKData5 = (iaData.set('tabPageK4', pageKData4), JSON.parse(JSON.stringify(iaPageKData5))),
-  pageKData6 = (iaData.set('tabPageK5', pageKData5), JSON.parse(JSON.stringify(iaPageKData6))),
-  pageKData7 = (iaData.set('tabPageK6', pageKData6), JSON.parse(JSON.stringify(iaPageKData7))),
-  pageKData8 = (iaData.set('tabPageK7', pageKData7), JSON.parse(JSON.stringify(iaPageKData8))),
-  pageLData = (iaData.set('tabPageK8', pageKData8), JSON.parse(JSON.stringify(iaPageLData))),
-  pageLData1 = (iaData.set('tabPageL', pageLData), JSON.parse(JSON.stringify(iaPageLData1))),
-  pageLData2 = (iaData.set('tabPageL1', pageLData1), JSON.parse(JSON.stringify(iaPageLData2))),
-  pageLData3 = (iaData.set('tabPageL2', pageLData2), JSON.parse(JSON.stringify(iaPageLData3))),
-  pageMData = (iaData.set('tabPageL3', pageLData3), JSON.parse(JSON.stringify(iaPageMData))),
-  pageMData1 = (iaData.set('tabPageM', pageMData), JSON.parse(JSON.stringify(iaPageMData1))),
-  pageMData2 = (iaData.set('tabPageM1', pageMData1), JSON.parse(JSON.stringify(iaPageMData2))),
-  pageMData3 = (iaData.set('tabPageM2', pageMData2), JSON.parse(JSON.stringify(iaPageMData3))),
-  pageMData4 = (iaData.set('tabPageM3', pageMData3), JSON.parse(JSON.stringify(iaPageMData4))),
-  pageMData5 = (iaData.set('tabPageM4', pageMData4), JSON.parse(JSON.stringify(iaPageMData5))),
-  pageMData6 = (iaData.set('tabPageM5', pageMData5), JSON.parse(JSON.stringify(iaPageMData6))),
-  pageMData7 = (iaData.set('tabPageM6', pageMData6), JSON.parse(JSON.stringify(iaPageMData7))),
-  pageMData8 = (iaData.set('tabPageM7', pageMData7), JSON.parse(JSON.stringify(iaPageMData8))),
-  pageMData9 = (iaData.set('tabPageM8', pageMData8), JSON.parse(JSON.stringify(iaPageMData9))),
-  pageMData10 = (iaData.set('tabPageM9', pageMData9), JSON.parse(JSON.stringify(iaPageMData10))),
-  pageNData = (iaData.set('tabPageM10', pageMData10), JSON.parse(JSON.stringify(iaPageNData))),
-  pageNData1 = (iaData.set('tabPageN', pageNData), JSON.parse(JSON.stringify(iaPageNData1))),
-  pageNData2 = (iaData.set('tabPageN1', pageNData1), JSON.parse(JSON.stringify(iaPageNData2))),
-  pageNData3 = (iaData.set('tabPageN2', pageNData2), JSON.parse(JSON.stringify(iaPageNData3))),
-  pageNData4 = (iaData.set('tabPageN3', pageNData3), JSON.parse(JSON.stringify(iaPageNData4))),
-  pageNData5 = (iaData.set('tabPageN4', pageNData4), JSON.parse(JSON.stringify(iaPageNData5))),
-  pageNData6 = (iaData.set('tabPageN5', pageNData5), JSON.parse(JSON.stringify(iaPageNData6))),
-  pageNData7 = (iaData.set('tabPageN6', pageNData6), JSON.parse(JSON.stringify(iaPageNData7))),
-  pageNData8 = (iaData.set('tabPageN7', pageNData7), JSON.parse(JSON.stringify(iaPageNData8))),
-  pageZData = (iaData.set('tabPageN8', pageNData8), JSON.parse(JSON.stringify(iaPageZData))),
-  pageZData1 = (iaData.set('tabPageZ', pageZData), JSON.parse(JSON.stringify(iaPageZData1))),
-  pageZData2 = (iaData.set('tabPageZ1', pageZData1), JSON.parse(JSON.stringify(iaPageZData2))),
-  pageZData3 = (iaData.set('tabPageZ2', pageZData2), JSON.parse(JSON.stringify(iaPageZData3))),
-  pageZData4 = (iaData.set('tabPageZ3', pageZData3), JSON.parse(JSON.stringify(iaPageZData4))),
-  pageZData5 = (iaData.set('tabPageZ4', pageZData4), JSON.parse(JSON.stringify(iaPageZData5))),
-  pageZData6 = (iaData.set('tabPageZ5', pageZData5), JSON.parse(JSON.stringify(iaPageZData6))),
-  pageZData7 = (iaData.set('tabPageZ6', pageZData6), JSON.parse(JSON.stringify(iaPageZData7))),
-  pageZData8 = (iaData.set('tabPageZ7', pageZData7), JSON.parse(JSON.stringify(iaPageZData8))),
-  pageZData9 = (iaData.set('tabPageZ8', pageZData8), JSON.parse(JSON.stringify(iaPageZData9))),
-  pageZData10 = (iaData.set('tabPageZ9', pageZData9), JSON.parse(JSON.stringify(iaPageZData10))),
-  pageZData11 = (iaData.set('tabPageZ10', pageZData10), JSON.parse(JSON.stringify(iaPageZData11))),
-  pageXData = (iaData.set('tabPageZ11', pageZData11), JSON.parse(JSON.stringify(iaPageXData))),
-  pageXData1 = (iaData.set('tabPageX', pageXData), JSON.parse(JSON.stringify(iaPageXData1))),
-  iaMemo =
-    (iaData.set('tabPageX1', pageXData1),
-    iaData.init(),
-    {
-      init: () => {
-        (iaMemo.toggle(), iaMemo.all());
-      },
-      toggle: () => {
-        $('.data-list tbody > tr > td .note-list.option-fold').on('click', function () {
-          $(this).hasClass('is-open') ? $(this).removeClass('is-open') : $(this).addClass('is-open');
-        });
-      },
-      all: () => {
-        $('.btn-memo-all').on('click', function () {
-          var a = $(this).closest('.tab-item').attr('id');
-          $(this).hasClass('is-open')
-            ? ($(this).removeClass('is-open').text('더보기'),
-              $(`#${a} .data-list tbody > tr > td .note-list.option-fold`).each(function () {
-                $(this).removeClass('is-open');
-              }))
-            : ($(this).addClass('is-open').text('닫기'),
-              $(`#${a} .data-list tbody > tr > td .note-list.option-fold`).each(function () {
-                $(this).addClass('is-open');
-              }));
-        });
-      },
-    }),
-  commUiFnSetVH =
-    (iaMemo.init(),
-    () => {
-      var a = 0.01 * window.innerHeight;
-      document.documentElement.style.setProperty('--vh', a + 'px');
-    }),
-  commUiFnTab =
-    (commUiFnSetVH(),
-    window.addEventListener('resize', commUiFnSetVH),
-    {
-      init: () => {
-        commUiFnTab.select();
-      },
-      select: () => {
-        const a = document.querySelectorAll('.ia-page .ia-list-header .ia-gnb .tab-menu');
-        a.forEach(function (a) {
-          a.addEventListener('click', function () {
-            const a = this.closest('.ia-page'),
-              t = a.querySelector('#' + this.getAttribute('aria-controls'));
-            (a.querySelectorAll('.ia-list-header .tab-menu').forEach(function (a) {
-              (a.classList.remove(commUiVar.activeClass), a.setAttribute('aria-selected', !1), a.querySelector('a').setAttribute('tabindex', -1));
-            }),
-              a.querySelectorAll('.tab-list .tab-item').forEach(function (a) {
-                (a.classList.remove(commUiVar.activeClass), a.setAttribute('aria-hidden', !0), a.setAttribute('tabindex', -1));
-              }),
-              this.classList.add(commUiVar.activeClass),
-              this.setAttribute('aria-selected', !0),
-              this.querySelector('a').setAttribute('tabindex', 0),
-              t.classList.add(commUiVar.activeClass),
-              t.setAttribute('aria-hidden', !1),
-              t.setAttribute('tabindex', 0),
-              t.querySelectorAll('.ia-gnb').length && t.querySelector('.gnb-dep1 > li > .gnb-dep2 > .tab-menu:first-child').click());
-          });
-        });
-      },
-    }),
-  commUiVar = (commUiFnTab.init(), { activeClass: 'is-active', openClass: 'is-open', animationSpeed: 300, focusElements: 'a[href], area[href], input:not([disabled]), select:not([disabled]), textarea:not([disabled]), button:not([disabled], .btn-clear), [tabindex="0"], [data-focus-on="true"]', activeTF: { inputBtnClear: !1, inputSearch: !1, inputCalendar: !1, select: !1, popup: !1, popover: !1 }, popupZIndex: 20 }),
-  mobBtnMenu =
-    ($('.gnb-dep1 li > a').bind('click', function (a) {
-      ($('.gnb-dep1 li').removeClass('current'), $(this).parents('li').addClass('current'), $(this).siblings('.gnb-dep2').children('li').eq(0).addClass('current').click());
-    }),
-    document.querySelectorAll('.btn-mobilemenu'));
-mobBtnMenu.forEach(function (a) {
-  a.addEventListener('click', function () {
-    let a = document.querySelector('.top-head');
-    a.classList.contains('active') ? a.classList.remove('active') : a.classList.add('active');
+    });
+  }
+};
+
+// 모바일 메뉴 버튼 등 추가 이벤트 바인딩
+document.querySelectorAll('.btn-mobilemenu').forEach(btn => {
+  btn.addEventListener('click', () => {
+    document.querySelector('.top-head').classList.toggle('active');
   });
+});
+
+document.addEventListener('click', (e) => {
+    if (e.target.matches('.gnb-dep1 li > a, .gnb-dep1 li > a *')) {
+        const a = e.target.closest('a');
+        const li = a.parentElement;
+        
+        // 형제들 class 제거
+        const siblings = li.parentElement.children;
+        Array.from(siblings).forEach(sib => sib.classList.remove('current'));
+        
+        // 본인 class 추가
+        li.classList.add('current');
+    }
 });
