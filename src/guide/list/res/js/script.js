@@ -27,34 +27,50 @@ const iaData = {
     if (!container) return; // 해당 탭 컨텐츠가 없으면 패스
 
     container.innerHTML = `
-      <table class="data-list">
-        <caption class="sr-only">산출물 목록</caption>
-        <colgroup>
-          <col /><col /><col /><col /><col /><col /><col /><col /><col />
-          <col /><col /><col /><col /><col /><col /><col /><col />
-        </colgroup>
-        <thead>
-          <tr>
-            <th scope="col">NO</th>
-            <th scope="col">생성일 <button type="button" class="data-sort">▼</button></th>
-            <th scope="col">최종수정일 <button type="button" class="data-sort">▼</button></th>
-            <th scope="col">Depth1 <button type="button" class="data-sort">▼</button></th>
-            <th scope="col">Depth2 <button type="button" class="data-sort">▼</button></th>
-            <th scope="col">Depth3 <button type="button" class="data-sort">▼</button></th>
-            <th scope="col">Depth4 <button type="button" class="data-sort">▼</button></th>
-            <th scope="col">디바이스 <button type="button" class="data-sort">▼</button></th>
-            <th scope="col">화면구분 <button type="button" class="data-sort">▼</button></th>
-            <th scope="col">페이지종류 <button type="button" class="data-sort">▼</button></th>
-            <th scope="col">화면명 <button type="button" class="data-sort">▼</button></th>
-            <th scope="col">화면ID <button type="button" class="data-sort">▼</button></th>
-            <th scope="col">경로</th>
-            <th scope="col">작업차수 <select class="select-filter" data-sort-name="order"><option value="">전체</option></select></th>
-            <th scope="col">상태 <select class="select-filter" data-sort-name="status"><option value="">전체</option></select></th>
-            <th scope="col">Memo</th>
-          </tr>
-        </thead>
-        <tbody></tbody>
-      </table>
+      <div class="w-full max-w-[100vw] overflow-x-auto bg-white shadow-sm rounded-lg border border-gray-200 dark:border-gray-700 relative" style="width: 100%;">
+        <table class="data-list w-full border-collapse text-sm text-left text-gray-700 dark:text-gray-300" style="min-width: 1000px;">
+          <caption class="sr-only">산출물 목록</caption>
+          <colgroup>
+            <col style="width: 50px;" />
+            <col style="width: 100px;" />
+            <col style="width: 100px;" />
+            <col />
+            <col />
+            <col />
+            <col />
+            <col style="width: 80px;" />
+            <col style="width: 80px;" />
+            <col style="width: 80px;" />
+            <col style="width: 200px;" />
+            <col style="width: 150px;" />
+            <col style="width: 300px;" />
+            <col style="width: 80px;" />
+            <col style="width: 80px;" />
+            <col />
+          </colgroup>
+          <thead class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-800 dark:text-gray-400">
+            <tr>
+              <th scope="col" class="px-4 py-3 font-bold border-b whitespace-nowrap">NO</th>
+              <th scope="col" class="px-4 py-3 font-bold border-b whitespace-nowrap">생성일 <button type="button" class="data-sort ml-1">▼</button></th>
+              <th scope="col" class="px-4 py-3 font-bold border-b whitespace-nowrap">최종수정일 <button type="button" class="data-sort ml-1">▼</button></th>
+              <th scope="col" class="px-4 py-3 font-bold border-b whitespace-nowrap">Depth1 <button type="button" class="data-sort ml-1">▼</button></th>
+              <th scope="col" class="px-4 py-3 font-bold border-b whitespace-nowrap">Depth2 <button type="button" class="data-sort ml-1">▼</button></th>
+              <th scope="col" class="px-4 py-3 font-bold border-b whitespace-nowrap">Depth3 <button type="button" class="data-sort ml-1">▼</button></th>
+              <th scope="col" class="px-4 py-3 font-bold border-b whitespace-nowrap">Depth4 <button type="button" class="data-sort ml-1">▼</button></th>
+              <th scope="col" class="px-4 py-3 font-bold border-b whitespace-nowrap">디바이스 <button type="button" class="data-sort ml-1">▼</button></th>
+              <th scope="col" class="px-4 py-3 font-bold border-b whitespace-nowrap">화면구분 <button type="button" class="data-sort ml-1">▼</button></th>
+              <th scope="col" class="px-4 py-3 font-bold border-b whitespace-nowrap">페이지종류 <button type="button" class="data-sort ml-1">▼</button></th>
+              <th scope="col" class="px-4 py-3 font-bold border-b whitespace-nowrap">화면명 <button type="button" class="data-sort ml-1">▼</button></th>
+              <th scope="col" class="px-4 py-3 font-bold border-b whitespace-nowrap">화면ID <button type="button" class="data-sort ml-1">▼</button></th>
+              <th scope="col" class="px-4 py-3 font-bold border-b whitespace-nowrap">경로</th>
+              <th scope="col" class="px-4 py-3 font-bold border-b whitespace-nowrap">작업차수 <select class="select-filter ml-1 border rounded p-1 text-xs" data-sort-name="order"><option value="">전체</option></select></th>
+              <th scope="col" class="px-4 py-3 font-bold border-b whitespace-nowrap">상태 <select class="select-filter ml-1 border rounded p-1 text-xs" data-sort-name="status"><option value="">전체</option></select></th>
+              <th scope="col" class="px-4 py-3 font-bold border-b whitespace-nowrap">Memo</th>
+            </tr>
+          </thead>
+          <tbody class="divide-y divide-gray-200 dark:divide-gray-700"></tbody>
+        </table>
+      </div>
     `;
 
     const tbody = container.querySelector('.data-list tbody');
@@ -103,23 +119,23 @@ const iaData = {
         }
 
         html += `
-          <tr class="${statusClass}">
-            <td>${index + 1}</td>
-            <td>${item.createDate}</td>
-            <td>${item.modifyDate}</td>
-            <td class="align-left">${item.depth1}</td>
-            <td class="align-left">${item.depth2}</td>
-            <td class="align-left">${item.depth3}</td>
-            <td class="align-left">${item.depth4}</td>
-            <td>${item.device}</td>
-            <td>${item.user}</td>
-            <td>${item.pageType}</td>
-            <td class="align-left">${item.pageName}</td>
-            <td class="align-left">${item.pageID}</td>
-            <td class="align-left"><a href="${item.link}" target="_blank" title="새창열림">${item.link}</a></td>
-            <td class="sort-order">${item.order}</td>
-            <td class="sort-status">${item.status}</td>
-            <td class="align-left">${memoHtml}</td>
+          <tr class="${statusClass} hover:bg-gray-50 dark:hover:bg-gray-700 transition-colors duration-150">
+            <td class="px-4 py-2 border-b whitespace-nowrap font-medium text-center">${index + 1}</td>
+            <td class="px-4 py-2 border-b whitespace-nowrap text-center">${item.createDate}</td>
+            <td class="px-4 py-2 border-b whitespace-nowrap text-center">${item.modifyDate}</td>
+            <td class="px-4 py-2 border-b whitespace-nowrap">${item.depth1}</td>
+            <td class="px-4 py-2 border-b whitespace-nowrap">${item.depth2}</td>
+            <td class="px-4 py-2 border-b whitespace-nowrap">${item.depth3}</td>
+            <td class="px-4 py-2 border-b whitespace-nowrap">${item.depth4}</td>
+            <td class="px-4 py-2 border-b whitespace-nowrap text-center">${item.device}</td>
+            <td class="px-4 py-2 border-b whitespace-nowrap text-center">${item.user}</td>
+            <td class="px-4 py-2 border-b whitespace-nowrap text-center">${item.pageType}</td>
+            <td class="px-4 py-2 border-b whitespace-nowrap font-semibold text-gray-900 dark:text-white">${item.pageName}</td>
+            <td class="px-4 py-2 border-b whitespace-nowrap text-gray-500 font-mono text-xs">${item.pageID}</td>
+            <td class="px-4 py-2 border-b whitespace-nowrap"><a href="${item.link}" target="_blank" title="새창열림" class="text-blue-600 hover:underline dark:text-blue-400">${item.link}</a></td>
+            <td class="sort-order px-4 py-2 border-b whitespace-nowrap text-center">${item.order}</td>
+            <td class="sort-status px-4 py-2 border-b whitespace-nowrap text-center font-bold">${item.status}</td>
+            <td class="align-left px-4 py-2 border-b min-w-[200px]">${memoHtml}</td>
           </tr>
         `;
       });
