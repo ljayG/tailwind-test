@@ -1,0 +1,241 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link href="/src/assets/css/style.css" rel="stylesheet" />
+    <script id="tailwind-config">
+      tailwind.config = {
+        darkMode: 'class',
+        theme: {
+          extend: {
+            colors: {
+              primary: '#136dec',
+              'background-light': '#f6f7f8',
+              'background-dark': '#101822',
+            },
+            fontFamily: {
+              display: ['Pretendard', 'Manrope', 'sans-serif'],
+              sans: ['Pretendard', 'Manrope', 'sans-serif'],
+            },
+            borderRadius: {
+              DEFAULT: '0.25rem',
+              lg: '0.5rem',
+              xl: '0.75rem',
+              full: '9999px',
+            },
+          },
+        },
+      };
+    </script>
+    <style>
+      body {
+        font-family: 'Pretendard', 'Manrope', sans-serif;
+        min-height: max(884px, 100dvh);
+      }
+      .material-symbols-outlined {
+        font-variation-settings:
+          'FILL' 0,
+          'wght' 400,
+          'GRAD' 0,
+          'opsz' 24;
+      }
+    </style>
+    <style>
+      body {
+        min-height: max(884px, 100dvh);
+      }
+    </style>
+  </head>
+  <body class="bg-background-light dark:bg-background-dark min-h-screen text-[#0d131b] dark:text-slate-100">
+    <nav class="bg-background-light/80 dark:bg-background-dark/80 sticky top-0 z-50 border-b border-slate-200 backdrop-blur-md dark:border-slate-800">
+      <div class="mx-auto flex max-w-md items-center justify-between p-4">
+        <div class="bg-primary flex size-10 shrink-0 items-center justify-center rounded-lg text-white">
+          <span class="material-symbols-outlined">corporate_fare</span>
+        </div>
+        <div class="flex-1 px-4">
+          <h2 class="text-lg leading-tight font-extrabold tracking-tight text-[#0d131b] dark:text-white">신한 비즈니스</h2>
+          <p class="text-xs font-medium text-[#4c6c9a] dark:text-slate-400">(주)글로벌 코퍼레이션</p>
+        </div>
+        <div class="flex items-center gap-2">
+          <button class="flex size-10 items-center justify-center rounded-full bg-slate-100 text-[#0d131b] transition-colors dark:bg-slate-800 dark:text-white">
+            <span class="material-symbols-outlined text-[22px]">notifications</span>
+          </button>
+          <div class="border-primary/20 size-10 rounded-full border-2 bg-cover bg-center" data-alt="Corporate user profile avatar" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBTxON6A-DT_o53lG_mJKozgOSD-yABZU2SbLFi44c3OHxl7eWOKwPvbYpZYogCNrjjoNOxQ4dSZ7Qf05Osk4fmdxTe7E4c7CTPFTuqjLMI09-IcJi7IncyWx6uiQVBobNjIonJ0uPCbVuTkrcnVzbHOTuW76b0QFxn6pJBxKz9sybULTJ4Pj3m8dAOsjOdxWyOM4HZmJasJO98F_XpfqduYv6TqvkubD4hz6gxuwvRhk1tkEb8z8F3k8kd18kjFwAVXJH50D4saZU')"></div>
+        </div>
+      </div>
+    </nav>
+    <main class="mx-auto max-w-md pb-24">
+      <div class="p-4">
+        <div class="bg-primary relative flex flex-col items-stretch justify-start overflow-hidden rounded-xl p-6 text-white shadow-lg">
+          <div class="absolute top-0 right-0 -mt-16 -mr-16 h-32 w-32 rounded-full bg-white/10 blur-2xl"></div>
+          <div class="absolute bottom-0 left-0 -mb-12 -ml-12 h-24 w-24 rounded-full bg-blue-400/20 blur-xl"></div>
+          <div class="relative z-10">
+            <div class="mb-4 flex items-start justify-between">
+              <div>
+                <p class="mb-1 text-sm leading-normal font-medium text-blue-100">총 자산</p>
+                <p class="text-3xl leading-tight font-extrabold tracking-tight text-white">1,240,500,000원</p>
+              </div>
+              <button class="rounded-lg bg-white/20 p-2 transition-colors hover:bg-white/30">
+                <span class="material-symbols-outlined text-[20px]">visibility</span>
+              </button>
+            </div>
+            <div class="flex items-center gap-2 border-t border-white/10 pt-4">
+              <div class="flex items-center rounded bg-white/10 px-2 py-1 text-xs font-medium text-blue-100">
+                <span class="material-symbols-outlined mr-1 text-[14px]">trending_up</span>
+                전월 대비 +2.4%
+              </div>
+              <div class="ml-auto text-[10px] font-bold tracking-widest text-blue-200 uppercase">2분 전 업데이트</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="px-4 pb-2">
+        <div class="border-l-primary flex flex-1 flex-row items-center justify-between gap-4 rounded-xl border border-l-4 border-slate-200 bg-white p-4 shadow-sm dark:border-slate-800 dark:bg-slate-900">
+          <div class="flex items-center gap-3">
+            <div class="bg-primary/10 text-primary flex size-10 items-center justify-center rounded-full">
+              <span class="material-symbols-outlined">rule</span>
+            </div>
+            <div class="flex flex-col">
+              <p class="text-sm leading-tight font-bold text-[#0d131b] dark:text-white">결재 대기</p>
+              <p class="text-xs leading-normal font-normal text-[#4c6c9a] dark:text-slate-400">5건의 이체 결재가 대기 중입니다</p>
+            </div>
+          </div>
+          <button class="bg-primary shadow-primary/20 flex h-9 items-center justify-center rounded-lg px-4 text-xs font-bold text-white shadow-md transition-transform active:scale-95">
+            <span class="truncate">확인</span>
+          </button>
+        </div>
+      </div>
+      <div class="flex items-center justify-between px-4 pt-6 pb-2">
+        <h3 class="text-lg leading-tight font-extrabold tracking-tight text-[#0d131b] dark:text-white">빠른 실행</h3>
+      </div>
+      <div class="grid grid-cols-3 gap-3 px-4">
+        <div class="group flex flex-col items-center justify-center gap-2 rounded-xl border border-slate-200 bg-white p-4 text-center transition-colors hover:bg-slate-50 dark:border-slate-800 dark:bg-slate-900 dark:hover:bg-slate-800/50">
+          <div class="text-primary flex size-12 items-center justify-center rounded-full bg-blue-50 transition-transform group-hover:scale-110 dark:bg-blue-900/30">
+            <span class="material-symbols-outlined text-[28px]">swap_horiz</span>
+          </div>
+          <h2 class="text-xs leading-tight font-bold text-[#0d131b] dark:text-slate-200">이체</h2>
+        </div>
+        <div class="group flex flex-col items-center justify-center gap-2 rounded-xl border border-slate-200 bg-white p-4 text-center transition-colors hover:bg-slate-50 dark:border-slate-800 dark:bg-slate-900 dark:hover:bg-slate-800/50">
+          <div class="flex size-12 items-center justify-center rounded-full bg-green-50 text-green-600 transition-transform group-hover:scale-110 dark:bg-green-900/30">
+            <span class="material-symbols-outlined text-[28px]">payments</span>
+          </div>
+          <h2 class="text-xs leading-tight font-bold text-[#0d131b] dark:text-slate-200">급여</h2>
+        </div>
+        <div class="group flex flex-col items-center justify-center gap-2 rounded-xl border border-slate-200 bg-white p-4 text-center transition-colors hover:bg-slate-50 dark:border-slate-800 dark:bg-slate-900 dark:hover:bg-slate-800/50">
+          <div class="flex size-12 items-center justify-center rounded-full bg-orange-50 text-orange-600 transition-transform group-hover:scale-110 dark:bg-orange-900/30">
+            <span class="material-symbols-outlined text-[28px]">receipt_long</span>
+          </div>
+          <h2 class="text-xs leading-tight font-bold text-[#0d131b] dark:text-slate-200">공과금</h2>
+        </div>
+      </div>
+      <div class="flex items-center justify-between px-4 pt-8 pb-2">
+        <h3 class="text-lg leading-tight font-extrabold tracking-tight text-[#0d131b] dark:text-white">자주 쓰는 계좌</h3>
+        <button class="text-primary text-sm font-bold">전체보기</button>
+      </div>
+      <div class="flex flex-col gap-3 px-4">
+        <div class="flex flex-col rounded-xl border border-slate-200 bg-white p-4 shadow-sm dark:border-slate-800 dark:bg-slate-900">
+          <div class="mb-3 flex items-start justify-between">
+            <div class="flex gap-3">
+              <div class="flex size-10 items-center justify-center rounded-lg bg-slate-100 text-slate-500 dark:bg-slate-800">
+                <span class="material-symbols-outlined">account_balance_wallet</span>
+              </div>
+              <div>
+                <p class="text-sm font-bold text-[#0d131b] dark:text-white">운영 입출금</p>
+                <p class="text-xs text-[#4c6c9a] dark:text-slate-400">**** 8821</p>
+              </div>
+            </div>
+            <div class="text-right">
+              <p class="text-base font-extrabold text-[#0d131b] dark:text-white">840,200,500원</p>
+              <p class="text-[10px] font-bold text-green-600 uppercase">사용중</p>
+            </div>
+          </div>
+          <div class="flex items-center justify-between border-t border-slate-100 pt-3 dark:border-slate-800">
+            <div class="flex items-center gap-2">
+              <span class="material-symbols-outlined text-[16px] text-slate-400">history</span>
+              <p class="text-[11px] text-[#4c6c9a] dark:text-slate-500">
+                최근:
+                <span class="font-bold text-slate-700 dark:text-slate-300">-2,400,000원 거래처 결제</span>
+              </p>
+            </div>
+            <button class="flex size-6 items-center justify-center rounded-full bg-slate-50 text-slate-400 dark:bg-slate-800">
+              <span class="material-symbols-outlined text-[18px]">chevron_right</span>
+            </button>
+          </div>
+        </div>
+        <div class="flex flex-col rounded-xl border border-slate-200 bg-white p-4 shadow-sm dark:border-slate-800 dark:bg-slate-900">
+          <div class="mb-3 flex items-start justify-between">
+            <div class="flex gap-3">
+              <div class="flex size-10 items-center justify-center rounded-lg bg-slate-100 text-slate-500 dark:bg-slate-800">
+                <span class="material-symbols-outlined">savings</span>
+              </div>
+              <div>
+                <p class="text-sm font-bold text-[#0d131b] dark:text-white">법인세 유보 예금</p>
+                <p class="text-xs text-[#4c6c9a] dark:text-slate-400">**** 1290</p>
+              </div>
+            </div>
+            <div class="text-right">
+              <p class="text-base font-extrabold text-[#0d131b] dark:text-white">400,299,500원</p>
+              <p class="text-primary text-[10px] font-bold uppercase">연 2.1% 금리</p>
+            </div>
+          </div>
+          <div class="flex items-center justify-between border-t border-slate-100 pt-3 dark:border-slate-800">
+            <div class="flex items-center gap-2">
+              <span class="material-symbols-outlined text-[16px] text-slate-400">history</span>
+              <p class="text-[11px] text-[#4c6c9a] dark:text-slate-500">
+                최근:
+                <span class="font-bold text-slate-700 dark:text-slate-300">+12,000,000원 계좌이체</span>
+              </p>
+            </div>
+            <button class="flex size-6 items-center justify-center rounded-full bg-slate-50 text-slate-400 dark:bg-slate-800">
+              <span class="material-symbols-outlined text-[18px]">chevron_right</span>
+            </button>
+          </div>
+        </div>
+      </div>
+      <div class="mt-4 p-4">
+        <div class="flex flex-col items-stretch justify-start overflow-hidden rounded-xl border border-slate-200 bg-white shadow-sm dark:border-slate-800 dark:bg-slate-900">
+          <div class="aspect-[21/9] w-full bg-cover bg-center bg-no-repeat" data-alt="Modern corporate office interior with glass walls" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAyVMcTrbiXLXv_kCjH2jzs1SCYKTAHpLqrGYmZpvGcss6YOfn1aeZROWaebdqLaC0avLGfwT_zg2XWOMLJZtVX6iD4t0jlQQumz3o70tJvkilfWezhJ9qBs-g0_3p58vE2PAby5BQrN7sguk79dXhMcp1dQo-lQj2hjZPx01c29bt_LmOaV3aOKKzvdUwuc9BsrhVVr7yCLKJqfNWRHggXHf_NH3DmXdbvhV0Df-m6LZNBycf0e-dwGEM83F604Drf79Kn8BirOJM')"></div>
+          <div class="flex w-full flex-col items-stretch justify-center gap-1 p-4">
+            <p class="text-primary text-[10px] font-bold tracking-widest uppercase">성장 기회</p>
+            <p class="text-lg leading-tight font-extrabold text-[#0d131b] dark:text-white">비즈니스 규모를 확장하세요</p>
+            <div class="mt-1 flex items-center justify-between gap-3">
+              <p class="text-xs leading-normal font-normal text-[#4c6c9a] dark:text-slate-400">경쟁력 있는 금리로 최대 2.5억원의 대출 한도를 확인하세요.</p>
+              <button class="bg-primary flex h-9 min-w-[84px] shrink-0 cursor-pointer items-center justify-center overflow-hidden rounded-lg px-4 text-xs font-bold text-white transition-colors">
+                <span class="truncate">신청하기</span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <div class="dark:bg-background-dark/90 fixed right-0 bottom-0 left-0 z-50 mx-auto max-w-md border-t border-slate-200 bg-white/90 backdrop-blur-xl dark:border-slate-800">
+      <div class="flex h-20 items-center justify-around pb-4">
+        <button class="text-primary flex flex-col items-center gap-1">
+          <span class="material-symbols-outlined text-[26px]">home</span>
+          <span class="text-[10px] font-bold">홈</span>
+        </button>
+        <button class="flex flex-col items-center gap-1 text-slate-400 dark:text-slate-500">
+          <span class="material-symbols-outlined text-[26px]">swap_horiz</span>
+          <span class="text-[10px] font-medium">이체</span>
+        </button>
+        <button class="flex flex-col items-center gap-1 text-slate-400 dark:text-slate-500">
+          <div class="relative">
+            <span class="material-symbols-outlined text-[26px]">verified_user</span>
+            <span class="bg-primary absolute -top-1 -right-1 flex size-4 items-center justify-center rounded-full text-[8px] font-bold text-white">5</span>
+          </div>
+          <span class="text-[10px] font-medium">결재</span>
+        </button>
+        <button class="flex flex-col items-center gap-1 text-slate-400 dark:text-slate-500">
+          <span class="material-symbols-outlined text-[26px]">shopping_bag</span>
+          <span class="text-[10px] font-medium">상품</span>
+        </button>
+        <button class="flex flex-col items-center gap-1 text-slate-400 dark:text-slate-500">
+          <span class="material-symbols-outlined text-[26px]">menu</span>
+          <span class="text-[10px] font-medium">전체메뉴</span>
+        </button>
+      </div>
+    </div>
+  </body>
+</html>
