@@ -12,4 +12,18 @@ export default defineConfig({
       "@": resolve(__dirname, "src"),
     },
   },
+  build: {
+    minify: false, // 코드 압축 해제 (가독성 유지)
+    rollupOptions: {
+      input: {
+        main: resolve(__dirname, "src/views/index.html"),
+        iaList: resolve(__dirname, "src/guide/list/ia/index.html"),
+      },
+      output: {
+        entryFileNames: "assets/[name].js",
+        chunkFileNames: "assets/[name].js",
+        assetFileNames: "assets/[name].[ext]",
+      },
+    },
+  },
 });
